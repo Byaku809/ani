@@ -3,37 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Anime World</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <title>Anime Watch | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Login to Anime World</h1>
-
-        <!-- QR Section -->
-        <div class="qr-section">
-            <img src="https://via.placeholder.com/200" alt="QR Code">
-            <p>Scan the QR code to login</p>
+    <!-- Header with Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Anime Watch</h1>
         </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Divider -->
-        <div class="divider">or</div>
-
-        <!-- Login Button -->
-        <button class="login-btn">Login with Email</button>
-
-        <!-- Alternative Login Options -->
-        <div class="login-options">
-            <button>Facebook</button>
-            <button>Google</button>
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <h2>Featured Anime</h2>
+        <div class="anime-grid">
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/300x400" alt="Anime 1">
+                <h3>Anime Title 1</h3>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/300x400" alt="Anime 2">
+                <h3>Anime Title 2</h3>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/300x400" alt="Anime 3">
+                <h3>Anime Title 3</h3>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/300x400" alt="Anime 4">
+                <h3>Anime Title 4</h3>
+            </div>
         </div>
+    </section>
 
-        <!-- Footer Text -->
-        <div class="footer-text">
-            <p>Need help? <a href="#">Contact Support</a></p>
-        </div>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Anime Watch. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
