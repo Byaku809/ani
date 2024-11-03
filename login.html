@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Нэвтрэх</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login | Anime Watch</title>
 </head>
 <body>
-     <div class="loginbox">
-      <h2>Нэвтрэх</h2>
-      <form>
-            <div class="userbox">
-                  <input type="text" name="" required>
-                  <label>Утасны дугаар</label>
-            </div>
-            <div class="userbox">
-                  <input type="password" name="" required>
-                  <label>Нууц үг</label>
-            </div>
-            <div> <a href="#" class="forgot_pass">Нууц үг мартсан</a> 
-            </div>
-            <a class="btn_submit" href="#">Нэвтрэх</a>
-      </form>
-     </div>
+    <header class="navbar">
+        <div class="logo">
+            <h1>Anime Watch</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="genre.html">Genres</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <h2>Login</h2>
+        <form action="#">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anime Watch. All rights reserved.</p>
+    </footer>
 </body>
 </html>

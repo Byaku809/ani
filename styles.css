@@ -1,121 +1,309 @@
---color
---color
---color
---color
---color
---color
---color
---color
---size--
---size--
---size--
---size--
---size--
---size--
-
-/* General Styles */
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+:root {
+    --primary-color: #141F2A; /* Гол өнгө: Цэнхэр */
+    --secondary-color: #2ecc71; /* Нэмэлт өнгө: Ногоон */
+    --nav-text-color: #b4b4ff;
+    --background-color: #2f2f2f; /* Дэвсгэр өнгө: бараан */
+    --text-color: #333;
+    --text-size-nav: 10rem;
+    --text-size: 20rem;
+  }
+  
+  /* Ерөнхий Загвар */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  head.form {
+    float: right;
   }
   
   body {
-      font-family: 'Arial', sans-serif;
-      background-color: #0d0d0f; /* Dark black background */
-      color: white;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color); /* Хар өнгийн дэвсгэр */
+    color: white;
   }
   
-  /* Header with Navigation */
+  /* Цэсний Хэсэг */
   .navbar {
-      display: flex;
-      width: 10rem;
-      height: 100%;
-      background-color: #2f2f2f;
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 10px 20px;
-
-  }
-  .nav-links{
-      list-style: none;
-      position: relative;
+    display: flex;
+    width: 8rem;
+    height: 100vh;
+    background-color: var(--background-color);
+    position: fixed;
+    left: 0;
+    padding: 10px 20px;
+    margin: 0;
 
 
   }
-  .nav-links li{
-      padding: 10px 0;
-      float: center;
+  .anime-item:last-child{
+    margin-top: auto;
+
+  }
+
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    list-style: none;
+    position: relative;
+    float: left;
+  }
+  
+  .nav-links li {
+    padding: 1rem 0;
+    float: left;
+  }
+  
+  .nav-links li a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    padding: 0px 2rem;
+    display: flex;
+    align-items: center;
   }
   
   .logo h1 {
-      color: #e6e6e6; /* Light grey for logo */
+    color: #e6e6e6; /* Логоны цайвар саарал өнгө */
   }
-  
-
   
   .nav-links a {
-      text-decoration: none;
-      color: #b4b4ff; /* Light purple for nav links */
-      font-size: 16px;
-      transition: color 0.3s;
+    text-decoration: none;
+    color: var(--nav-text-color); /* Цэсний холбоосын өнгө */
+    font-size: 16px;
+    transition: color 0.3s;
   }
   
-  .nav-links a:hover {
-      color: #e9dede; /* White on hover */
+  .nav-links li:hover a {
+    color: #e9dede; /* Хулганаар хөдлөх үед цагаан */
   }
   
-  /* Main Content Section */
+  @media only screen and (max-width: 10rem) {
+    .navbar {
+      width: 5rem;
+    } 
+  }
+  .search-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem; /* Navbar-ийн өргөнийг тооцоолон */
+    padding-top: 1rem;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input[type="text"] {
+    padding: 1rem;
+    font-size: 1rem;
+    width:30rem;
+    height: 1rem;
+    border: 1px solid #ffffff;
+    margin-right: 5rem;
+    border-radius: 2rem;
+  }
+  
+  .search-box button {
+    font-size: 1.5rem;
+    color: var(--nav-text-color);
+    border: none;
+    cursor: pointer;
+    margin-right: 10rem;
+    background-color: var(--primary-color);
+    border-radius: 0.8rem;
+  }
+  
+  .search-box button:hover {
+    background-color: #3e3e3e;
+  }
+  
+  .search-box a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  
+  /* Үндсэн Агуулгын Хэсэг */
   .main-content {
-      padding: 40px;
-      text-align: center;
+    padding: 40px;
+    text-align: center;
   }
+
   
   .main-content h2 {
-      color: #b4b4ff; /* Light purple for headings */
-      margin-bottom: 20px;
+    color: #fff; /* Гарчгийн өнгө */
+    margin-bottom: 20px;
   }
   
   .anime-grid {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   
   .anime-item {
-      background-color: #1e1e26; /* Dark black/purple card background */
-      border-radius: 8px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-      width: 22%;
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.3s;
+    background-image: url(Arcane.jpg);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    width: 22%;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
   }
   
   .anime-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
   }
   
   .anime-item h3 {
-      color: #e6e6e6; /* Light grey for anime titles */
-      font-size: 18px;
+    color: #e6e6e6; /* Картын гарчгийн цайвар саарал өнгө */
+    font-size: 18px;
   }
   
   .anime-item:hover {
-      transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05); /* Хулганаар хөдлөх үед томролт */
   }
+  .login-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.login-section form {
+    max-width: 300px;
+    margin: auto;
+}
+
+.login-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.player-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.genre-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.genre-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Жанр бүрийн хоорондох зай */
+    justify-content: center; /* Жанруудын төвд байрлуулах */
+}
+
+.genre-item {
+    background-color: #fff; /* Шинэ фон */
+    border: 1px solid #ccc; /* Хадгалах зориулалт */
+    border-radius: 8px; /* Хөвөгч өнцөг */
+    padding: 15px; /* Доторх зай */
+    width: 250px; /* Жанрын блокийн өргөн */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Сүүдэр */
+}
+
+.genre-item h3 {
+    margin: 0 0 10px; /* Дээд талд зай */
+}
+
+.genre-item p {
+    margin: 0 0 15px; /* Дараагийн зай */
+}
+
+.genre-item a {
+    text-decoration: none; /* Текстийн доогуур шугам байхгүй */
+    color: #333; /* Текстийн өнгө */
+    background-color: #007bff; /* Товчлуурын фон */
+    padding: 10px 15px; /* Товчлуурын доторх зай */
+    border-radius: 5px; /* Товчлуурын өнцөг */
+    transition: background-color 0.3s; /* Хөдөлгөөн (hover эффект) */
+}
+
+.genre-item a:hover {
+    background-color: #0056b3; /* Hover үед фон өнгө */
+    color: white; /* Текстийн өнгө */
+}
+.anime-profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-header {
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    width: 300px; /* Зургийн өргөн */
+    height: auto; /* Зургийн өндөр */
+    border-radius: 10px; /* Зургийн хөвөгч өнцөг */
+}
+
+.profile-details h3 {
+    margin-top: 20px; /* Дээд талд зай */
+}
+
+.profile-details p {
+    margin: 10px 0; /* Дараагийн зай */
+}
+
+.profile-details ul {
+    list-style-type: none; /* Тэмдэгтийн жагсаалтыг арилгах */
+    padding: 0; /* Доторх зайг арилгах */
+}
+
+.watch-button {
+    display: inline-block;
+    text-decoration: none; /* Текстийн доогуур шугам байхгүй */
+    color: white; /* Текстийн өнгө */
+    background-color: #007bff; /* Товчлуурын фон */
+    padding: 10px 15px; /* Товчлуурын доторх зай */
+    border-radius: 5px; /* Товчлуурын өнцөг */
+    transition: background-color 0.3s; /* Хөдөлгөөн (hover эффект) */
+}
+
+.watch-button:hover {
+    background-color: #0056b3; /* Hover үед фон өнгө */
+}
   
-  /* Footer */
+  /* Хөл хэсэг */
   footer {
-      background-color: #1c1c20;
-      padding: 20px;
-      text-align: center;
-      color: #b4b4ff; /* Light purple for footer text */
-      margin-top: 40px;
+    background-color: #1c1c20;
+    padding: 2rem;
+    text-align: center;
+    color: #b4b4ff; /* Хөл хэсгийн текстийн өнгө */
+    ;
   }
-  
+
+.download {
+    text-align: center;
+    margin: 10px;
+}
+
+.download span {
+    display: block;
+    background-image: Arcane;
+}
