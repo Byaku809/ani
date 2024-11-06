@@ -68,28 +68,79 @@
     padding: 0px 2rem;
     display: flex;
     align-items: center;
+    display: none;
   }
   
   .logo h1 {
     color: #e6e6e6; /* Логоны цайвар саарал өнгө */
+  }
+  .link-text {
+    display: none;
   }
   
   .nav-links a {
     text-decoration: none;
     color: var(--nav-text-color); /* Цэсний холбоосын өнгө */
     font-size: 16px;
-    transition: color 0.3s;
   }
   
   .nav-links li:hover a {
     color: #e9dede; /* Хулганаар хөдлөх үед цагаан */
   }
   
-  @media only screen and (max-width: 10rem) {
-    .navbar {
-      width: 5rem;
-    } 
+  .navbar:hover .logo svg {
+    transform: rotate(-180deg);
   }
+  
+    .navbar:hover .nav-links li a {
+      display: inline;
+      padding: 5rem, 2rem;
+      
+  }
+    .logo {
+      display: none;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .nav-link {
+      justify-content: center;
+    }
+  
+    main {
+      margin: 0;
+    }
+      
+  
+  /* Large screens */
+  @media only screen and (min-width: 7rem) {
+    .navbar {
+      top: 0;
+      width: 3rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 10rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+    .navbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar:hover .logo-text
+    {
+      left: 0px;
+    }
+  }
+  
   .search-section {
     width: 100%;
     display: flex;
@@ -137,7 +188,7 @@
   
   /* Үндсэн Агуулгын Хэсэг */
   .main-content {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
   }
 
@@ -151,14 +202,16 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 100px;
   }
   
   .anime-item {
     background-image: url(Arcane.jpg);
+    background-size: cover;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-    width: 22%;
+    width: 80rem;
+    height: 40rem;
     padding: 15px;
     text-align: center;
     transition: transform 0.3s;
@@ -166,7 +219,7 @@
   
   .anime-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
   }
@@ -292,10 +345,12 @@
   /* Хөл хэсэг */
   footer {
     background-color: #1c1c20;
-    padding: 2rem;
     text-align: center;
     color: #b4b4ff; /* Хөл хэсгийн текстийн өнгө */
-    ;
+    margin 0;
+    width: 100%;
+    padding: 0;
+  
   }
 
 .download {

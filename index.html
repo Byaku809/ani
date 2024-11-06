@@ -6,28 +6,31 @@
     <link rel="stylesheet" type="text/css" media="all" href="styles.css" />
     <title>Anime Watch | Home</title>
     <script src="https://kit.fontawesome.com/cf8c8b75c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header class="navbar">
         <div class="logo">
-            <!-- Лого дүрс болон текст байж болно -->
+           <i class="fa-solid fa-a"></i> <!-- Лого дүрс болон текст байж болно -->
         </div>
         <nav>
             <ul class="nav-links">
                 <li>
-                    <i class="fa-solid fa-house"></i><a href="index.html">Home</a>
-                    <span class="link_text"></span>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="index.html"><span class="link_text">Home</span></a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-arrow-trend-up"></i><a href="#">Trending</a>
-                    <span class="link_text"></span>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <a href="#"><span class="link_text">Trending</span></a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-ghost"></i><a href="genre.html">Genres</a>
-                    <span class="link_text"></span>
+                    <i class="fa-solid fa-ghost"></i>
+                    <a href="genre.html"><span class="link_text">Genres</span></a>
                 </li>
-                <li><i class="fa-solid fa-address-book"></i><a href="contact.html">Contact</a></li>
-                <span class="link_text"></span>
+                <li>
+                    <i class="fa-solid fa-address-book"></i>
+                    <a href="contact.html"><span class="link_text">Contact</span></a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -41,19 +44,29 @@
             <button type="button" title="Shuffle" aria-label="Shuffle">
                 <i class="fa-solid fa-random"></i>
             </button>
+            <button class="login">Нэвтрэх</button>
             <a href="login.html">Нэвтрэх</a>
         </form>
     </div>
 
     <section class="main-content">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+            </div>
         <div class="anime-grid">
-            <div class="anime-item">
+            <div class="anime-item" a href="player.html">
             
                 <h3>Arcane</h3>
-                <p>Алдарт League of Legends тоглоомын 10 жилийн ойд зориулан хийгдэж байгаа цуврал юм. Тус цуврал дээр Шинжлэх ухааныг гол зүйлээ болгож амьдардаг Пилтовер хот болон түүний доор байрлах хотуудын мөргөлдөөний тухай харуулах болно. Тус анимэйшн дээр гол дүрүүдээр ВИ болон Жинкс эгч дүүсийн тухай өгүүлнэ.</p>
+                <p">Алдарт League of Legends тоглоомын 10 жилийн ойд зориулан хийгдэж байгаа цуврал юм. Тус цуврал дээр Шинжлэх ухааныг гол зүйлээ болгож амьдардаг Пилтовер хот болон түүний доор байрлах хотуудын мөргөлдөөний тухай харуулах болно. Тус анимэйшн дээр гол дүрүүдээр ВИ болон Жинкс эгч дүүсийн тухай өгүүлнэ.</p>
             </div>
             <div class="anime-item">
-              
+            
                 <h3>Dan da dan</h3>
                 <p>Та сүнс болон харийнханд итгэдэг үү? Бидний нүднээс далдуур оршиж буй мэт тэдгээр зүйлс бидэнтэй адил ахлах сургуулийн охин, хүү хоёрын амьдралыг өөрчлөх хөгжилтэй, аймшигтай, адал явдалт гээд олон төрлийн хамрах гайхалтай бүтээл байх болно.</p>
             </div>
@@ -97,5 +110,6 @@
 
 </body>
     <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
 
 </html>
