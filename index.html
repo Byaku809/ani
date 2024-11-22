@@ -11,7 +11,7 @@
 <body>
     <header class="navbar">
         <div class="logo">
-           <i class="fa-solid fa-a"></i> <!-- Лого дүрс болон текст байж болно -->
+            <i class="fa-solid fa-a"></i> <!-- Лого дүрс болон текст байж болно -->
         </div>
         <nav>
             <ul class="nav-links">
@@ -37,79 +37,73 @@
 
     <div class="search-section">
         <form class="search-box">
-            <input type="text" placeholder="Search..." />
-            <button type="submit" title="Submit My Tax Return" aria-label="Search">
-                <i class="fa-solid fa-arrow-right"></i>
+            <input type="text" placeholder="Search..." aria-label="Search" />
+            <button type="submit" title="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+        </form>
+        <div class="Shuffle-ran">
             <button type="button" title="Shuffle" aria-label="Shuffle">
                 <i class="fa-solid fa-random"></i>
             </button>
-            <button class="login">Нэвтрэх</button>
+        </div>
+        <div class="login-home">
+            <button class="login-btn"></button>
             <a href="login.html">Нэвтрэх</a>
-        </form>
+        </div>
     </div>
 
     <section class="main-content">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
-            </div>
         <div class="anime-grid">
-            <div class="anime-item" a href="player.html">
-            
-                <h3>Arcane</h3>
-                <p">Алдарт League of Legends тоглоомын 10 жилийн ойд зориулан хийгдэж байгаа цуврал юм. Тус цуврал дээр Шинжлэх ухааныг гол зүйлээ болгож амьдардаг Пилтовер хот болон түүний доор байрлах хотуудын мөргөлдөөний тухай харуулах болно. Тус анимэйшн дээр гол дүрүүдээр ВИ болон Жинкс эгч дүүсийн тухай өгүүлнэ.</p>
+            <!-- Slide 1 -->
+            <div class="anime-item slide">
+                <img src="League of Legends (Jinx).jpg" alt="Arcane" class="main-slide">
+                <div class="anime-overlay">
+                    <h3>Arcane</h3>
+                    <p>Алдарт League of Legends тоглоомын 10 жилийн ойд зориулан хийгдэж байгаа цуврал юм...</p>
+                    <a href="player.html" class="play-button">Play</a>
+                </div>
             </div>
-            <div class="anime-item">
-            
-                <h3>Dan da dan</h3>
-                <p>Та сүнс болон харийнханд итгэдэг үү? Бидний нүднээс далдуур оршиж буй мэт тэдгээр зүйлс бидэнтэй адил ахлах сургуулийн охин, хүү хоёрын амьдралыг өөрчлөх хөгжилтэй, аймшигтай, адал явдалт гээд олон төрлийн хамрах гайхалтай бүтээл байх болно.</p>
-            </div>
-            <div class="anime-item">
-           
-                <h3>Blue lock</h3>
-                <p>2018 оны гутамшигтай ялагдлын дараагаар Японы хөлбөмбөгийн холбоо хурал хийдэг. Энэ хурлын үеэр холбооны шинэ гишүүн Анри нэгэн төслийн санааг дэвшүүлдэг. Уг төслийг Блүү Лок гэх бөгөөд уг төслөөр 300 ахлах сургуулийн довтлогчийг сонгон авч шалгаруулан бэлтгэнэ.</p>
+            <!-- Slide 2 -->
+            <div class="anime-item slide">
+                <img src="download.jpg" alt="Dan da dan" class="main-slide">
+                <div class="anime-overlay">
+                    <h3>Dan da dan</h3>
+                    <p>Та сүнс болон харийнханд итгэдэг үү?...</p>
+                    <a href="player.html" class="play-button">Play</a>
+                </div>
             </div>
         </div>
-
-
-    <section class="trending-section">
-        <h2>Trending</h2>
+        <button class="prev" onclick="plusSlides(-1)">❮</button>
+        <button class="next" onclick="plusSlides(1)">❯</button>
     </section>
+    <section class="anime" id="anime"> 
+        <div class="anime-slider">
+            <div class="slider-wr">
+                <div class="Box" style="background-image: url(anime-image)-1.jpg;">
 
-    <section class="top-all-section">
-        <h2>TOP</h2>
-        <h2>ALL</h2>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <ul>
-            <li>
-                <div class="download android">
+        <div class="foot">
+            <ul>
+                <li>
                     <i class="fa fa-android fa-2x"></i>
                     <span>Download from</span>
                     <span>Google Play</span>
-                </div>
-            </li>
-            <li>
-                <div class="download ios">
+                </li>
+                <li>
                     <i class="fa fa-apple fa-2x"></i>
                     <span>Download from</span>
                     <span>App Store</span>
-                </div>
-            </li>
-        </ul>
-
-
+                </li>
+            </ul>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-    <!-- Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
-
 </html>
