@@ -1,16 +1,17 @@
 :root {
-    --primary-color: #141F2A; /* Гол өнгө: хар */
+    --primary-color: #000000; /* Гол өнгө: хар */
     --secondary-color: #2ecc71; /* Нэмэлт өнгө: Ногоон */
     --thirddary-color: #fff; /* Нэмэлт өнгө: цагаан */
     --nav-text-color: #b4b4ff;
-    --background-color: #2f2f2f; /* Дэвсгэр өнгө: бараан */
-    --text-color: #333;
+    --background-color: #272727; /* Дэвсгэр өнгө: бараан */
+    --text-color: #000000;
     --text-size-nav: 10rem;
     --text-size: 20rem;
-    --front-slide-urgun: 70rem;
+    --front-slide-urgun: 80rem;
     --front-slide-undur: 40rem;
     --trending-slide-urgun: 10rem;
-    --trending-slide-undur: 15rem;
+    --trending-slide-undur: 18rem;
+    --general-font: arial;
 }
   
   /* Ерөнхий Загвар */
@@ -21,7 +22,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--general-font);
     background-color: var(--primary-color); /* Хар өнгийн дэвсгэр */
     color : var(--thirddary-color);
   }
@@ -66,7 +67,7 @@
   opacity: 0;
   width: 100px;
   position: absolute;
-  left: 60px;
+  left: 29em;
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--nav-text-color);
@@ -98,10 +99,10 @@
       width: 100%;
       display: flex;
       justify-content: space-around;
-      padding-top: 1.5rem;
+      padding-top: 0.5rem;
       position: relative; /* Тохиргоотой элементүүдийг барих */
       align-items: center;
-      padding: 2rem;
+      padding: 1rem;
 
  
   }
@@ -223,11 +224,11 @@
        /* Basic Styling */
        .anime-grid {
         position: relative;
-        width: 90%;
-        max-width: 70rem;
+        width: 120%;
+        max-width: 80rem;
         margin: auto;
         overflow: visible;
-        padding-top: 2rem;
+        padding-top: 0.7rem;
     }
     .anime-item {
         display: none;
@@ -267,22 +268,54 @@
     }
     
     /* Navigation Buttons */
-    .prev, .next {
+    button.prev, 
+    button.next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 24px;
-        color: #007BFF;
-        background: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
         border: none;
+        padding: 10px 15px;
         cursor: pointer;
+        font-size: 18px;
+        z-index: 10;
     }
-    .prev { left: 10px; }
-    .next { right: 10px; }
+    
+    button.prev {
+        left: 10px; /* Зүүн талд байрлуулна */
+    }
+    
+    button.next {
+        right: 0px; /* Баруун талд байрлуулна */
+    }
+    
+    button.prev:hover,
+    button.next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
   
   .anime-item:hover {
     transform: scale(1.01); /* Хулганаар хөдлөх үед томролт */
   }
+  .Box {
+    background-size: cover; /* Зургийг контейнер дүүргэх */
+    background-position: center; /* Зургийг төвд байрлуулах */
+    width: var(--trending-slide-urgun)  ; /* Хэмжээг тохируулах */
+    height: var(--trending-slide-undur);
+}
+.heading{
+  text-align: center
+  ;
+  color: var(--nav-text-color);
+  margin bottom: 3rem;
+  font-size: 3rem;
+}
+.anime{
+  padding: 5rem;
+
+
+}
   .login-section {
     padding: 20px;
     text-align: center;
