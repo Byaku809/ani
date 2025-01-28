@@ -1,453 +1,192 @@
-:root {
-    --primary-color: #000000; /* Гол өнгө: хар */
-    --secondary-color: #2ecc71; /* Нэмэлт өнгө: Ногоон */
-    --thirddary-color: #fff; /* Нэмэлт өнгө: цагаан */
-    --nav-text-color: #b4b4ff;
-    --background-color: #272727; /* Дэвсгэр өнгө: бараан */
-    --text-color: #000000;
-    --text-size-nav: 10rem;
-    --text-size: 20rem;
-    --front-slide-urgun: 80rem;
-    --front-slide-undur: 40rem;
-    --trending-slide-urgun: 10rem;
-    --trending-slide-undur: 18rem;
-    --general-font: arial;
-}
-  
-  /* Ерөнхий Загвар */
-
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--general-font);
-    background-color: var(--primary-color); /* Хар өнгийн дэвсгэр */
-    color : var(--thirddary-color);
-  }
-  
-  /* Цэсний Хэсэг */
-  .navbar {
-    display: flex;
-    width: 3rem;
-    height: 100%;
-    background-color: var(--background-color);
-    position: fixed;
-    left: 0;
-    margin: 0;
-}
-
-/* Цэсний хэсэг */
-.nav-links {
-  list-style: none;
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
-  flex-direction: column;
+  background: linear-gradient(to bottom, #2b1f43, #141f2a);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b1f43;
+  color: rgb(138, 123, 135);
+  padding: 10px 20px;
+}
+
+/* Mobile navigation */
+/* Hamburger Icon */
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #2b1f43;
+  color: white;
+  width: 40px;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  z-index: 1000;
+}
+
+/* Menubar (нуусан байдал) */
+.menubar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Эхэнд далд байна */
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(to bottom, #2b1f43, #141f2a);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease; /* Зөөлөн шилжилт */
+}
+
+.menubar p {
   display: flex;
   align-items: center;
-  height: auto;  /* Өндрийг тохируулсан */
+  margin: 20px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Текст эхэнд нуух */
+.menubar p span {
+  display: none;
+  margin-left: 10px; /* Иконоос текст хүртэлх зай */
+}
+
+/* Menubar идэвхтэй үед */
+.menubar.active {
+  left: 0; /* Зүүн талд бүрэн харагдана */
+}
+
+/* Идэвхтэй үед текст харагдах */
+.menubar.active p span {
+  display: inline;
+}
+.hamburger-active {
+  background-color: #a65353;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
   position: relative;
-  color: var(--nav-text-color);
 }
 
-.nav-links li {
-  padding: 1.2rem 0;
-  position: relative; /* Tooltip-ийг зөв байрлуулахад шаардлагатай */
+.search-bar {
+  background-color: #f0f0f0; /* Саарал өнгө */
+  border: 1px solid #ccc; /* Хүрээний өнгө */
+  border-radius: 20px; /* Дугуй булан */
+  padding: 10px 15px; /* Дотор талын зай */
+  font-size: 16px; /* Үсгийн хэмжээ */
+  outline: none; /* Фокус хийхэд ирдэг хүрээг арилгах */
+  width: 250px; /* Өргөн */
+  transition: all 0.3s ease; /* Зөөлөн шилжилт */
+  align-items: center;
 }
 
-/* Ховерыг хийх хэсэг */
-.nav-links li:hover span {
-  visibility: visible;
-  opacity: 1;
+.search-bar::placeholder {
+  color: #999; /* Placeholder текстийн өнгө */
 }
 
-/* Span элемент */
-.nav-links span {
-  visibility: hidden;
-  opacity: 0;
-  width: 100px;
-  position: absolute;
-  left: 29em;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--nav-text-color);
-  color: var(--background-color);
-  border-radius: 1rem;
-  white-space: nowrap;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 10; /* Энэ нь span элементийг бусад элементийн дээр гаргах болно */
-}
-  
-  .logo  {
-    color:var(--nav-text-color); /* Логоны цайвар саарал өнгө */
-    width: 1rem;
-    height: 5rem;
-  }
-
-    .navbar-nav {
-      flex-direction: row;
-    }
-  
-    .nav-link {
-      justify-content: center;
-    }
-  
-    main {
-      margin: 0;
-    }
-    .search-section {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      padding-top: 0.5rem;
-      position: relative; /* Тохиргоотой элементүүдийг барих */
-      align-items: center;
-      padding: 1rem;
-
- 
-  }
-  
-  .search-box {
-    display: flex;
-    align-items: top;
-    position: relative;
-    
+.search-bar:focus {
+  border: 1px solid #555; /* Фокус хийхэд хүрээний өнгө өөрчлөгдөнө */
+  background-color: #eaeaea; /* Фокус хийхэд цайвар болно */
 }
 
-.search-box input[type="text"] {
-    padding: 1rem;
-    font-size: 1rem;
-    width: 30rem;
-    height: 1rem;
-    border: 1px var(--thirddary-color);
-    border-radius: 2rem;
-    padding-right: 3rem; /* Товч болон текстийн хоорондын зай */
-}
-
-.search-box button {
-    position: absolute;
-    right: 1rem; /* Товчны байрлалыг текст талбарын баруун талд оруулах */
-    padding-top: 0.6rem;
-    border: none;
-    background: none;
-    color: var(--nav-text-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.search-box button:hover {
-    color: #3e3e3e;
-}
-  
-  .search-box a {
-      color: var(--primary-color);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.5rem;
-  }
-  .log
-  
-  /* Жижиг дэлгэцэнд зориулсан тохиргоо */
-  @media (max-width: 768px) {
-      .search-section {
-          margin-left: 0; /* Жижиг дэлгэцэнд төвд байх */
-          padding-top: 1rem;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-      }
-  
-      .search-box {
-          flex-direction: column; /* Босоо байрлал */
-          align-items: center;
-      }
-  
-      .search-box input[type="text"] {
-          width: 90%; /* Жижиг дэлгэцэнд дүүргэх */
-          margin-right: 0; /* Зайг багасгах */
-          margin-bottom: 1rem;
-      }
-  
-      }
-      /* Shuffle button */
-.Shuffle-ran {
-  margin-right: 15px; /* Овортой зай нэмэх */
-}
-
-.Shuffle-ran button {
-  background-color: var(--background-color); /* Цайвар саарал фон */
+.search-btn {
+  background-color: #3a013c;
+  color: white;
   border: none;
-  border-radius: 50%; /* Дугуй хэлбэртэй болгох */
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  align-items: right;
+  justify-content: right;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.search-btn:hover {
+  background-color: #5e005e; /* Товч дээр хулганаа аваачихад өнгө өөрчлөгдөнө */
+}
+
+.search-btn i {
+  font-size: 16px; /* Icon-ийн хэмжээ */
+}
+
+/* Add a semi-transparent background overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70rem;
+  height: 30rem;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Behind the menu but above the page content */
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Slider */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 70rem;
+  left: 5rem;
+  height: 30rem;
+  border-radius: 20px;
+  border: 2px solid rebeccapurple;
+}
+.sslide p {
+  position: absolute;
+  bottom: 1rem; /* Зургийн доод ирмэгээс зай */
+  right: 1rem; /* Зургийн баруун ирмэгээс зай */
+  background-color: rgba(0, 0, 0, 0.5); /* Хагас тунгалаг хар фон */
+  padding: 10px; /* Дотор талын зай */
+  border-radius: 10px; /* Буланг дугуй болгох */
+  z-index: 1; /* Зургийн дээр байрлуулна */
+  color: white; /* Цагаан текст */
+  font-size: 14px; /* Үсгийн хэмжээ */
+  line-height: 1.5; /* Мөр хоорондын зай */
+}
+
+.sslide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sslide img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
   padding: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.Shuffle-ran button:hover {
-  transform: scale(1.1); /* Дээр нь хулгана гүйлгэхэд томсгох */
-  background-color: var(--nav-text-color); /* Hover үед фон өөрчлөх */
-}
-
-/* Login хэсэг */
-.login-home {
-  display: flex;
-  align-items: center; /* Дүрс ба текст тэгшлэх */
-  gap: 10px; /* Дүрс болон текстийн хооронд зай нэмэх */
-  margin-right: 10px; /* Баруун талд бага зэрэг зай үлдээх */
-}
-
-.login-btn {
-  background-color: transparent; /* Дүрсний ар тал ил тод */
-  border: none;
-  font-size: var(--text-size); /* Дүрсийн хэмжээг тохируулах */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.login-btn:hover {
-  transform: rotate(20deg); /* Дээр нь хулгана гүйлгэхэд эргүүлэх эффект */
-  color: var(--nav-text-color); /* Өнгийг өөрчлөх */
-}
-
-.login-home a {
-  font-size: 16px;
-  text-decoration: none; /* Доогуур зураасгүй болгох */
-  color: var(--background-color);
-  transition: color 0.3s ease;
-}
-
-.login-home a:hover {
-  color:var(--nav-text-color); /* Hover үед текстийн өнгийг өөрчлөх */
-}
-  
-  /* Үндсэн Агуулгын Хэсэг */
-       /* Basic Styling */
-       .anime-grid {
-        position: relative;
-        width: 120%;
-        max-width: 80rem;
-        margin: auto;
-        overflow: visible;
-        padding-top: 0.7rem;
-    }
-    .anime-item {
-        display: none;
-        position: relative;
-        text-align: center;
-    }
-    .anime-item img {
-        width: var(--front-slide-urgun);
-        height: var(--front-slide-undur);
-    }
-    
-    /* Overlay styling */
-    .anime-overlay {
-        position: absolute;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .anime-overlay h3 {
-        margin: 0;
-        font-size: 24px;
-    }
-    .anime-overlay p {
-        font-size: 16px;
-    }
-    .play-button {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: var(--nav-text-color);
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    
-    /* Navigation Buttons */
-    button.prev, 
-    button.next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        font-size: 18px;
-        z-index: 10;
-    }
-    
-    button.prev {
-        left: 10px; /* Зүүн талд байрлуулна */
-    }
-    
-    button.next {
-        right: 0px; /* Баруун талд байрлуулна */
-    }
-    
-    button.prev:hover,
-    button.next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-  
-  .anime-item:hover {
-    transform: scale(1.01); /* Хулганаар хөдлөх үед томролт */
-  }
-  .Box {
-    background-size: cover; /* Зургийг контейнер дүүргэх */
-    background-position: center; /* Зургийг төвд байрлуулах */
-    width: var(--trending-slide-urgun)  ; /* Хэмжээг тохируулах */
-    height: var(--trending-slide-undur);
-}
-.heading{
-  text-align: center
-  ;
-  color: var(--nav-text-color);
-  margin bottom: 3rem;
-  font-size: 3rem;
-}
-.anime{
-  padding: 5rem;
-
-
-}
-  .login-section {
-    padding: 20px;
-    text-align: center;
-}
-
-.login-section form {
-    max-width: 300px;
-    margin: auto;
-}
-
-.login-section label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.login-section input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-.player-section {
-    text-align: center;
-    padding: 20px;
-}
-
-.genre-section {
-    padding: 20px;
-    text-align: center;
-}
-
-.genre-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Жанр бүрийн хоорондох зай */
-    justify-content: center; /* Жанруудын төвд байрлуулах */
-}
-
-.genre-item {
-    background-color: #fff; /* Шинэ фон */
-    border: 1px solid #ccc; /* Хадгалах зориулалт */
-    border-radius: 8px; /* Хөвөгч өнцөг */
-    padding: 15px; /* Доторх зай */
-    width: 250px; /* Жанрын блокийн өргөн */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Сүүдэр */
-}
-
-.genre-item h3 {
-    margin: 0 0 10px; /* Дээд талд зай */
-}
-
-.genre-item p {
-    margin: 0 0 15px; /* Дараагийн зай */
-}
-
-.genre-item a {
-    text-decoration: none; /* Текстийн доогуур шугам байхгүй */
-    color: #333; /* Текстийн өнгө */
-    background-color: #007bff; /* Товчлуурын фон */
-    padding: 10px 15px; /* Товчлуурын доторх зай */
-    border-radius: 5px; /* Товчлуурын өнцөг */
-    transition: background-color 0.3s; /* Хөдөлгөөн (hover эффект) */
-}
-
-.genre-item a:hover {
-    background-color: #0056b3; /* Hover үед фон өнгө */
-    color: white; /* Текстийн өнгө */
-}
-.anime-profile {
-    padding: 20px;
-    text-align: center;
-}
-
-.profile-header {
-    margin-bottom: 20px;
-}
-
-.profile-header img {
-    width: 300px; /* Зургийн өргөн */
-    height: auto; /* Зургийн өндөр */
-    border-radius: 10px; /* Зургийн хөвөгч өнцөг */
-}
-
-.profile-details h3 {
-    margin-top: 20px; /* Дээд талд зай */
-}
-
-.profile-details p {
-    margin: 10px 0; /* Дараагийн зай */
-}
-
-.profile-details ul {
-    list-style-type: none; /* Тэмдэгтийн жагсаалтыг арилгах */
-    padding: 0; /* Доторх зайг арилгах */
-}
-
-.watch-button {
-    display: inline-block;
-    text-decoration: none; /* Текстийн доогуур шугам байхгүй */
-    color: white; /* Текстийн өнгө */
-    background-color: #007bff; /* Товчлуурын фон */
-    padding: 10px 15px; /* Товчлуурын доторх зай */
-    border-radius: 5px; /* Товчлуурын өнцөг */
-    transition: background-color 0.3s; /* Хөдөлгөөн (hover эффект) */
-}
-
-.watch-button:hover {
-    background-color: #0056b3; /* Hover үед фон өнгө */
-}
-  
-  /* Хөл хэсэг */
-  .content {
-    flex: 1; /* Хуудасны үндсэн хэсэг дүүргэлттэй байх */
-    padding: 20px;
-}
-
-/* Footer */
-footer {
-    background-color:var(--background-color);
-    color: var(--nav-text-color);
-    text-align: center;
-    padding: 1rem;
-    text-align: center;
-    width: 100%;
-}
-
-.download {
-    text-align: center;
-    margin: 10px;
-}
-
-.download span {
-    display: block;
-    background-image: Arcane;
 }

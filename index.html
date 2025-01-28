@@ -1,129 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="all" href="styles.css" />
-    <title>Anime Watch | Home</title>
-    <script src="https://kit.fontawesome.com/cf8c8b75c6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <i class="login-home">
-             <a href="index.html">
-                <img src="462642105_1102616094795456_7546687817633407335_n.jpg" alt="logo">
-             </a>
-            </i> <!-- Лого дүрс болон текст байж болно -->
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <i class="fa-solid fa-house"></i>
-                    <a href="index.html"><span class="link_text">Home</span></a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-arrow-trend-up"></i>
-                    <a href="#"><span class="link_text">Trending</span></a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-ghost"></i>
-                    <a href="genre.html"><span class="link_text">Genres</span></a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-address-book"></i>
-                    <a href="contact.html"><span class="link_text">Contact</span></a>
-                </li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Slider & Navigation</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-...your_integrity_key..."
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="hamburger">☰</div>
+      <div class="menubar">
+        <p><i class="fas fa-home"></i> Home</p>
+        <p><i class="fas fa-tv"></i> Anime</p>
+        <p><i class="fas fa-plus"></i> New Anime</p>
+        <p><i class="fas fa-heart"></i> Liked</p>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="login-container">
+        <button class="login-btn"><i class="fas fa-user"></i> Login</button>
+      </div>
+
+      <!-- Mobile Navigation -->
     </header>
 
-    <div class="search-section">
-        <form class="search-box">
-            <input type="text" placeholder="Search..." aria-label="Search" />
-            <button type="submit" title="Search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <div class="Shuffle-ran">
-            <button type="button" title="Shuffle" aria-label="Shuffle">
-                <i class="fa-solid fa-random"></i>
-            </button>
-        </div>
-        <div class="login-home">
-            <button class="login-btn"></button>
-            <a href="login.html">Нэвтрэх</a>
-        </div>
+    <!-- Slider -->
+    <div class="slider-container">
+      <div class="sslide" data-js="sslide">
+        <img src="/image/p3.jpg" alt="Slide 1" />
+        <p>
+          Мангасууд болон муу ёрын хүчнүүд байнга заналхийлдэг ертөнцөд Сун
+          Жинвугийн адал явдлуудыг дагадаг. Сун тулалдаанууддаа өөрийгөө бүх хүн
+          төрөлхтний хамгийн сул анчин байснаас одоо байгаа хамгийн хүчтэй
+          анчдын нэг болгон хувиргадаг.
+        </p>
+        <img src="/image/p1.jpg" alt="Slide 2" />
+        <p>
+          Мангасууд болон муу ёрын хүчнүүд байнга заналхийлдэг ертөнцөд Сун
+          Жинвугийн адал явдлуудыг дагадаг. Сун тулалдаанууддаа өөрийгөө бүх хүн
+          төрөлхтний хамгийн сул анчин байснаас одоо байгаа хамгийн хүчтэй
+          анчдын нэг болгон хувиргадаг.
+        </p>
+        <img src="/image/p2.jpg" alt="Slide 3" />
+        <p>
+          Мангасууд болон муу ёрын хүчнүүд байнга заналхийлдэг ертөнцөд Сун
+          Жинвугийн адал явдлуудыг дагадаг. Сун тулалдаанууддаа өөрийгөө бүх хүн
+          төрөлхтний хамгийн сул анчин байснаас одоо байгаа хамгийн хүчтэй
+          анчдын нэг болгон хувиргадаг.
+        </p>
+      </div>
+      <div class="slider-controls">
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
     </div>
 
-    <section class="main-content">
-        <div class="anime-grid">
-            <!-- Slide 1 -->
-            <div class="anime-item slide">
-                <img src="League of Legends (Jinx).jpg" alt="Arcane" class="main-slide">
-                <div class="anime-overlay">
-                    <h3>Arcane</h3>
-                    <p>Алдарт League of Legends тоглоомын 10 жилийн ойд зориулан хийгдэж байгаа цуврал юм. Тус цуврал дээр Шинжлэх ухааныг гол зүйлээ болгож амьдардаг Пилтовер хот болон түүний доор байрлах хотуудын мөргөлдөөний тухай харуулах болно. Тус анимэйшн дээр гол дүрүүдээр ВИ болон Жинкс эгч дүүсийн тухай өгүүлнэ.</p>
-                    <a href="player.html" class="play-button">Play</a>
-                </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="anime-item slide">
-                <img src="download.jpg" alt="Dan da dan" class="main-slide">
-                <div class="anime-overlay">
-                    <h3>Dan da dan</h3>
-                    <p>Та сүнс болон харийнханд итгэдэг үү? Бидний нүднээс далдуур оршиж буй мэт тэдгээр зүйлс бидэнтэй адил ахлах сургуулийн охин, хүү хоёрын амьдралыг өөрчлөх хөгжилтэй, аймшигтай, адал явдалт гээд олон төрлийн хамрах гайхалтай бүтээл байх болно</p>
-                    <a href="player.html" class="play-button">Play</a>
-                </div>
-
-            </div>
-             <!-- Slide 3 -->
-             <div class="anime-item slide">
-                <img src="71PSWt9qhcL._SL1280_.jpg" alt="bluelock" class="main-slide">
-                <div class="anime-overlay">
-                    <h3>Blue lock</h3>
-                    <p>2018 оны гутамшигтай ялагдлын дараагаар Японы хөлбөмбөгийн холбоо хурал хийдэг. Энэ хурлын үеэр холбооны шинэ гишүүн Анри нэгэн төслийн санааг дэвшүүлдэг. Уг төслийг Блүү Лок гэх бөгөөд уг төслөөр 300 ахлах сургуулийн довтлогчийг сонгон авч шалгаруулан бэлтгэнэ</p>
-                    <a href="player.html" class="play-button">Play</a>
-                </div>
-
-            </div>
-        </div>
-        <button class="prev" onclick="plusSlides(-1)">❮</button>
-        <button class="next" onclick="plusSlides(1)">❯</button>
-    </section>
-    <h1 class="heading">Trending</h1>
-    <section class="anime" id="anime"> 
-        <div class="anime-slider">
-            <div class="slider-wrapper">
-                <div class="slide-slider">
-                <div class="Box" style="background-image: url(download\ \(1\).jpg)">
-                    <div class="content">
-                        <a href="#" class="play-button">play</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <footer>
-        <div class="foot">
-            <ul>
-                <li>
-                    <i class="fa fa-android fa-2x"></i>
-                    <span>Download from</span>
-                    <span>Google Play</span>
-                </li>
-                <li>
-                    <i class="fa fa-apple fa-2x"></i>
-                    <span>Download from</span>
-                    <span>App Store</span>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

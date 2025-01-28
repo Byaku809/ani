@@ -3,57 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Anime Profile | Anime Watch</title>
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+    <title>Anime Watch | player     </title>
+    <script src="https://kit.fontawesome.com/cf8c8b75c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header class="navbar">
         <div class="logo">
-            <h1>Anime Watch</h1>
+            <i class="login-home">
+             <a href="index.html">
+                <img src="462642105_1102616094795456_7546687817633407335_n.jpg" alt="logo">
+             </a>
+            </i> <!-- Лого дүрс болон текст байж болно -->
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="genre.html">Genres</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="anime-profile">
-        <div class="profile-header">
-            <h2>Arcane</h2>
-            <img src="path_to_arcane_image.jpg" alt="Arcane Image">
+    <main class="content">
+        <div class="anime-details">
+            <div class="anime-banner">
+                <img src="https://example.com/attack-on-titan.jpg" alt="Attack on Titan">
+                <div class="banner-content">
+                    <h1>Attack on titan</h1>
+                    <div class="meta-tags">
+                        <span class="tag">11+</span>
+                        <span class="tag">1080HD</span>
+                        <span class="tag">24</span>
+                        <span class="tag">23M</span>
+                        <span class="duration">9 цаг 36 минут</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="primary-button">тоглуулах</button>
+                        <button class="secondary-button">хадгалах</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="description">
+                Attack on Titan is a popular anime and manga series that explores humanity's struggle against giant humanoid creatures known as Titans. The story is set in a world where the remnants of humanity live within enormous walled cities to protect themselves from these monstrous beings. As the narrative unfolds, themes of survival, freedom, and the complexities of human nature are intricately woven into the characters' journeys and battles.
+            </div>
         </div>
-        <div class="profile-details">
-            <h3>Description</h3>
-            <p>Алдарт League of Legends тоглоомын 10 жилийн ойд зориулан хийгдэж байгаа цуврал юм. Тус цуврал дээр Шинжлэх ухааныг гол зүйлээ болгож амьдардаг Пилтовер хот болон түүний доор байрлах хотуудын мөргөлдөөний тухай харуулах болно. Тус анимэйшн дээр гол дүрүүдээр ВИ болон Жинкс эгч дүүсийн тухай өгүүлнэ.</p>
 
-            <h3>Genres</h3>
-            <ul>
-                <li>Action</li>
-                <li>Fantasy</li>
-                <li>Adventure</li>
-            </ul>
-
-            <h3>Rating</h3>
-            <p>8.8/10</p>
-
-            <h3>Episodes</h3>
-            <p>9</p>
-
-            <h3>Release Date</h3>
-            <p>November 6, 2021</p>
-
-            <h3>Watch Now</h3>
-            <a href="player.html" class="watch-button">Watch Episode 1</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Anime Watch. All rights reserved.</p>
-    </footer>
+        <aside class="info-sidebar">
+            <div class="info-group">
+                <h3>Нэр:</h3>
+                <p>Attack on Titan</p>
+            </div>
+            <div class="info-group">
+                <h3>Гарсан жил / улирал:</h3>
+                <p>2013</p>
+            </div>
+            <div class="info-group">
+                <h3>Зохиолч:</h3>
+                <p>Hajime Isayama</p>
+            </div>
+            <div class="info-group">
+                <h3>Студио:</h3>
+                <p>Wit Studio</p>
+            </div>
+            <div class="info-group">
+                <h3>Төлөв:</h3>
+                <p>Дууссан</p>
+            </div>
+            <div class="info-group">
+                <h3>Үнэлгээ:</h3>
+                <p>9.0/10</p>
+            </div>
+        </aside>
+    </main>
 </body>
 </html>

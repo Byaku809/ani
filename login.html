@@ -1,112 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Box with Shuffle and Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMp0X08LvfljHNE6vKsYj2CqkLzKhhiCp9H5JpZ" crossorigin="anonymous">
-    <style>
-        :root {
-            --nav-text-color: #b4b4ff;
-            --primary-color: #141F2A;
-            --background-color: #2f2f2f;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-bc">
+      <div class="contac">
+        <div class="login-card">
+          <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Please enter your credentials to login</p>
+          </div>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--primary-color);
-            color: white;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+          <form class="login-form">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+              />
+            </div>
 
-        .search-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 1rem;
-            position: relative;
-            gap: 1rem;
-        }
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+            </div>
 
-        .search-box {
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+            <div class="form-options">
+              <label class="remember-me">
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
 
-        .search-box input[type="text"] {
-            padding: 1rem;
-            font-size: 1rem;
-            width: 20rem;
-            border: 1px solid #ffffff;
-            border-radius: 2rem;
-            padding-right: 3rem;
-            color: #333;
-            outline: none;
-        }
+            <button type="submit" class="login-button">Login</button>
+          </form>
 
-        .search-box button {
-            position: absolute;
-            right: 1rem;
-            border: none;
-            background: none;
-            color: var(--nav-text-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .shuffle button {
-            font-size: 1.5rem;
-            color: var(--nav-text-color);
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .shuffle button:hover {
-            color: #3e3e3e;
-        }
-
-        .login-section button {
-            font-size: 1rem;
-            color: var(--nav-text-color);
-            background-color: var(--primary-color);
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-radius: 0.8rem;
-        }
-
-        .login-section a {
-            color: var(--nav-text-color);
-            text-decoration: none;
-            font-weight: bold;
-            margin-left: 1rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="search-section">
-        <form class="search-box" action="#" method="get">
-            <input type="text" placeholder="Search..." aria-label="Search" />
-            <button type="submit" title="Search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <div class="shuffle">
-            <button type="button" title="Shuffle" aria-label="Shuffle">
-                <i class="fa-solid fa-random"></i>
-            </button>
+          <div class="signup-link">
+            Don't have an account? <a href="#">Sign up</a>
+          </div>
         </div>
-        <div class="login-section">
-            <button class="login">Нэвтрэх</button>
-            <a href="login.html">Нэвтрэх</a>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

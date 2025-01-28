@@ -1,20 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-</head>
-<body>
-      <section class="player-section">
-            <h2>Watch Anime</h2>
-            <video controls>
-                <source src="path_to_anime_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-    
-        <footer>
-      
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="image/462642105_1102616094795456_7546687817633407335_n.jpg"
+          alt="logo"
+        />
+        <h1>aniWatch</h1>
+      </div>
+      <div class="search-section">
+        <form class="search-box">
+          <input type="text" placeholder="Search..." aria-label="Search" />
+          <button type="submit" title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i>
+            <a href="index.html"><span class="link_text">Home</span></a>
+          </li>
+          <li>
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <a href="#"><span class="link_text">Trending</span></a>
+          </li>
+          <li>
+            <i class="fa-solid fa-ghost"></i>
+            <a href="genre.html"><span class="link_text">Genres</span></a>
+          </li>
+          <li>
+            <i class="fa-solid fa-address-book"></i>
+            <a href="contact.html"><span class="link_text">Contact</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="menubar">
+      <ul>
+        <li>
+          <i class="fa-solid fa-house"></i>
+          <a href="index.html"><span class="link_text">Home</span></a>
+        </li>
+        <li>
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <a href="#"><span class="link_text">Trending</span></a>
+        </li>
+        <li>
+          <i class="fa-solid fa-ghost"></i>
+          <a href="genre.html"><span class="link_text">Genres</span></a>
+        </li>
+        <li>
+          <i class="fa-solid fa-address-book"></i>
+          <a href="contact.html"><span class="link_text">Contact</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="player-container">
+      <video id="videoPlayer" controls>
+        <source
+          src="video/[Kametsu] Akame ga Kill! S1 - 01 (1080p).mkv.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="episode-container">
+        <div class="episode-box">1</div>
+        <div class="episode-box">2</div>
+        <div class="episode-box">3</div>
+        <div class="episode-box">4</div>
+        <div class="episode-box">5</div>
+        <div class="episode-box">6</div>
+        <div class="episode-box">7</div>
+        <div class="episode-box">8</div>
+        <div class="episode-box">9</div>
+        <div class="episode-box">10</div>
+        <div class="episode-box">11</div>
+        <div class="episode-box">12</div>
+        <div class="episode-box">13</div>
+        <div class="episode-box">14</div>
+        <div class="episode-box">15</div>
+        <div class="episode-box">16</div>
+        <div class="episode-box">17</div>
+        <div class="episode-box">18</div>
+        <div class="episode-box">19</div>
+        <div class="episode-box">20</div>
+        <div class="episode-box">21</div>
+        <div class="episode-box">22</div>
+        <div class="episode-box">23</div>
+        <div class="episode-box">24</div>
+      </div>
+
+      <div class="info-section">
+        <div class="thumbnail">
+          <img src="image/Arcane.jpg" alt="Thumbnail" />
+          <div>
+            <h3>Arcane</h3>
+            <p>11+ | 1080p | 24 Episodes | 23M Views</p>
+          </div>
+        </div>
+        <div class="comment">
+          <p class="author">Дулмаа</p>
+          <p class="date">12:30 PM, Apr 21, 2021</p>
+          <p>
+            Дараагийн ангийн спойлер өгнө шүү. Манга дээрээ үнэхээр гоё юм
+            болсон.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      class VideoPlayer {
+        constructor() {
+          this.progress = document.querySelector(".progress");
+          this.playPauseBtn = document.querySelector(".play-pause");
+          this.fullscreenBtn = document.querySelector(".fullscreen");
+          this.timeDisplay = document.querySelector(".time");
+
+          this.setupEventListeners();
+        }
+
+        setupEventListeners() {
+          this.playPauseBtn.addEventListener("click", () =>
+            this.togglePlayPause()
+          );
+          this.fullscreenBtn.addEventListener("click", () =>
+            this.toggleFullscreen()
+          );
+        }
+
+        togglePlayPause() {
+          const isPlaying = this.playPauseBtn.textContent === "⏸";
+          this.playPauseBtn.textContent = isPlaying ? "▶" : "⏸";
+        }
+
+        toggleFullscreen() {
+          const player = document.querySelector(".video-player");
+          if (!document.fullscreenElement) {
+            player.requestFullscreen();
+          } else {
+            document.exitFullscreen();
+          }
+        }
+      }
+
+      export { VideoPlayer };
+    </script>
+  </body>
 </html>
