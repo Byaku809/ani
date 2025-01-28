@@ -11,13 +11,12 @@ fontAwesomeLink.referrerPolicy = "no-referrer";
 document.head.appendChild(fontAwesomeLink);
 
 // Toggle Mobile Navigation
-// Hamburger болон Menubar сонгох
-const hamburger = document.querySelector(".hamburger");
-const menubar = document.querySelector(".menubar");
+const mobileNav = document.querySelector(".hamburger");
+const navbar = document.querySelector(".menubar");
 
-// Hamburger дээр дарахад Menubar идэвхжих
-hamburger.addEventListener("click", () => {
-  menubar.classList.toggle("active"); // `active` ангиллыг нэмэх/хасах
+mobileNav.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+  mobileNav.classList.toggle("hamburger-active");
 });
 
 // Simple Slider Functionality
