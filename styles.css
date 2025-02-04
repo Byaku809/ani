@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #2b1f43, #141f2a);
+  background: linear-gradient(to bottom, #411e5c, #141f2a, #141f2a);
   min-height: 100vh;
 }
 
@@ -220,4 +220,108 @@ header {
     font-size: 12px;
     max-width: 280px;
   }
+}
+.login-wrapper {
+  display: flex; /* Хажуугаар нь зэрэгцүүлнэ */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Хоёр хэсгийн хооронд зай гаргах */
+}
+
+.login-container {
+  padding: 40px;
+  width: 30rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4rem;
+  margin-left: 5rem; /* Зүүн талаас 5rem зайтай болгох */
+  opacity: 1;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo {
+  color: #141f2a;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  background: #d18800;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #f7ef56;
+}
+
+.login-logo {
+  display: flex;
+  justify-content: left; /* Төв рүү тэгшлэх */
+  margin-left: 16rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem; /* Доошлуулах */
+  transform: translateX(20px); /* Баруун тийш 20px шилжүүлэх */
+}
+
+.login-logo img {
+  width: 100px; /* Зургийн хэмжээг тохируулах */
+  height: auto;
+  border-radius: 1rem; /* Дугуй болгох (хэрэв хэрэгтэй бол) */
+}
+.qr-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 3rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.qr-container img {
+  width: 20rem; /* QR зургийн хэмжээг тохируулах */
+  height: 20rem;
+}
+
+.forgot-password {
+  color: #ff4b4b;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  text-align: right;
+  margin: 10px 0;
+}
+
+.create-account {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.create-account a {
+  text-decoration: underline;
+  color: #007bff;
+}
+.qr-reader {
+  text-align: center; /* Текстийг төвд байрлуулах */
+  font-size: 1rem; /* Үсгийн хэмжээг тохируулах */
+  color: #ffffff; /* Өнгийг цагаан болгох */
+  font-weight: 500; /* Жаахан тодруулах */
+  margin-top: 0.5rem; /* Дээрээс зай авах */
+  padding-left: 2rem; /* Дотор зай нэмэх */
 }

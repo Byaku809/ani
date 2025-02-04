@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayMe Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        background: #1f1435;
+        color: white;
+      }
+
+      .login-logo {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .login-logo img {
+        height: 40px;
+      }
+
+      .login-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .login-container {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 15px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-size: 16px;
+      }
+
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .forgot-password {
+        color: #ff4b4b;
+        text-decoration: none;
+        font-size: 14px;
+        display: block;
+        text-align: right;
+        margin: 10px 0;
+      }
+
+      .login-button {
+        background: #d18800;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto;
+        transition: background-color 0.3s;
+      }
+
+      .login-button:hover {
+        background: #f7a000;
+      }
+
+      .register-link {
+        color: #3498db;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+      }
+
+      .qr-container {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .qr-code {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .qr-text {
+        color: white;
+        margin: 15px 0;
+        font-size: 14px;
+      }
+
+      .playme-text {
+        color: #ff4b4b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-logo">
+      <img src="path-to-your-logo.png" alt="PlayMe Logo" />
+    </div>
+
+    <div class="login-wrapper">
+      <div class="login-container">
+        <form>
+          <div class="input-group">
+            <input type="text" placeholder="Утасны дугаар" required />
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="Нууц үг" required />
+          </div>
+          <a href="#" class="forgot-password">Нууц үг мартсан?</a>
+          <button type="submit" class="login-button">Нэвтрэх</button>
+          <a href="#" class="register-link">Бүртгүүлэх</a>
+        </form>
+      </div>
+
+      <div class="qr-container">
+        <p class="qr-text">Тус QR кодыг</p>
+        <div class="qr-code">
+          <!-- QR code will be here -->
+        </div>
+        <p class="qr-text">
+          <span class="playme-text">PLAYME</span> аппликэйшнээр уншуулж нэвтрэнэ
+          үү
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
