@@ -22,20 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileContent = document.getElementById("profileContent");
   const showButton = document.getElementById("showButton");
 
-  backArrow.addEventListener("click", () => {
-    profileContent.classList.add("hidden");
-    setTimeout(() => {
-      showButton.classList.add("visible");
-    }, 300);
-  });
+  // ✨ Анх харагдахгүй байлгах
+  profileContent.classList.add("hidden");
 
   showButton.addEventListener("click", () => {
-    profileContent.classList.remove("hidden");
-    showButton.classList.remove("visible");
+    profileContent.style.display = "block"; // ✨ Эхлээд харагдуулна
+    setTimeout(() => {
+      profileContent.classList.add("visible");
+      profileContent.classList.remove("hidden");
+    }, 10);
   });
 
-  // Simple Slider Functionality
-  const slider = document.querySelector('[data-js="sslide"]');
+  backArrow.addEventListener("click", () => {
+    profileContent.classList.add("hidden");
+    profileContent.classList.remove("visible");
+
+    setTimeout(() => {
+      profileContent.style.display = "none"; // ✨ 0.3 сек дараа бүрэн нуух
+    }, 300);
+  });
+});
+// Simple Slider Functionality
+/*const slider = document.querySelector('[data-js="sslide"]');
   const allImages = slider ? slider.querySelectorAll("img") : [];
   const nextButton = document.querySelector(".next");
   const prevButton = document.querySelector(".prev");
@@ -74,4 +82,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-});
+});*/

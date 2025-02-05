@@ -158,20 +158,21 @@ header {
   transition: left 0.3s ease;
   z-index: 999;
   background-color: #141f2a;
-  opacity: 1;
+  display: none;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
+/* ✨ Нээх үед */
+.profile-content.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* ✨ Нуух үед */
 .profile-content.hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.profile-section {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
 }
 
 .profile-image {
