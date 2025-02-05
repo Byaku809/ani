@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Slider & Navigation</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <div class="hamburger">☰</div>
       <div class="menubar">
-        <p><i class="fas fa-home"></i> <span>Home</span></p>
+        <button class="back-button">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="login-log">
+          <img
+            src="image/462642105_1102616094795456_7546687817633407335_n.jpg"
+            alt=""
+          />
+        </div>
+
+        <p>
+          <a href="index.html"></a><i class="fas fa-home"></i> <span>Home</span>
+        </p>
         <p><i class="fas fa-tv"></i> <span>Anime</span></p>
         <p><i class="fas fa-plus"></i> <span>New Anime</span></p>
         <p><i class="fas fa-heart"></i> <span>Liked</span></p>
@@ -19,9 +38,49 @@
         <input type="text" placeholder="Search..." class="search-bar" />
         <button class="search-btn"><i class="fas fa-search"></i></button>
       </div>
-      <div class="login-container">
-        <button class="login-btn"><i class="fas fa-user"></i> Login</button>
+      <div class="login-catainer">
+          <button class="loginbtn" id="showButton"><i class="fas fa-user"></i></button>
       </div>
+      <body>
+    <div class="container">
+        <div class="profile-content" id="profileContent">
+            <div class="header">
+                <button class="back-arrow" id="backArrow">←</button>
+                <span>Хэрэглэгчийн мэдээлэл</span>
+            </div>
+
+            <div class="profile-section">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <div>Нэр: Хонгорзул</div>
+                    <div>Таны ID: 262022</div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div>24 өдөр</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div>6000</div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="menu-title">Хэрэглэгчийн цэс</h2>
+                <div class="menu-item">Миний профайл</div>
+                <div class="menu-item">Купон</div>
+                <div class="menu-item">Нөат баримт</div>
+                <div class="menu-item">Пин солих</div>
+                <div class="menu-item">Бүртгэлтэй төхөөрөмж</div>
+                <div class="menu-item">Үзсэн түүх</div>
+                <div class="menu-item">Таалагдсан аниме</div>
+            </div>
+        </div>
+    </div>
+
     </header>
 
     <div class="slider-container">
@@ -53,5 +112,6 @@
         <button class="next">❯</button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -11,8 +11,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2b1f43;
-  color: rgb(138, 123, 135);
   padding: 1rem;
   position: relative;
 }
@@ -22,29 +20,27 @@ header {
   font-size: 1.5rem;
   cursor: pointer;
   padding: 10px;
-  background-color: #2b1f43;
   color: white;
   width: 40px;
   text-align: center;
   border-radius: 5px;
   position: fixed;
   top: 10px;
-  left: 10px;
+  left: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
 .hamburger-active {
-  background-color: #a65353;
+  display: none;
 }
 
 .menubar {
   position: fixed;
   top: 0;
-  left: -280px;
+  left: -260px;
   width: 280px;
   height: 100%;
-  background: linear-gradient(to bottom, #2b1f43, #141f2a);
   color: white;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -54,6 +50,8 @@ header {
 
 .menubar.active {
   left: 0;
+  background-color: #141f2a;
+  color: #fcfcfc;
 }
 
 .menubar p {
@@ -66,7 +64,7 @@ header {
 }
 
 .menubar p:hover {
-  color: #a65353;
+  color: #a6539a;
 }
 
 .menubar p i {
@@ -109,7 +107,7 @@ header {
 }
 
 /* Login Button */
-.login-btn {
+.loginbtn {
   background-color: #3a013c;
   color: white;
   border: none;
@@ -119,8 +117,112 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.login-btn:hover {
+.loginbtn:hover {
   background-color: #5e005e;
+}
+.back-button {
+  position: absolute;
+  top: 10px;
+  margin-right: 1rem; /* Баруун талд байрлуулах */
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 1001; /* Менюгээс дээгүүр харагдах болгох */
+}
+
+.back-arrow {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+  transition: transform 0.2s;
+}
+
+.back-arrow:hover {
+  transform: translateX(-5px);
+}
+
+.profile-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 999;
+  background-color: #141f2a;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.profile-content.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-image {
+  width: 48px;
+  height: 48px;
+  background-color: #4a4a4a;
+  border-radius: 50%;
+}
+
+.profile-info {
+  color: #9ca3af;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background-color: #27272a;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-icon {
+  color: #ef4444;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.menu-section {
+  margin-top: 24px;
+}
+
+.menu-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.menu-item {
+  padding: 12px 0;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu-item:hover {
+  color: white;
 }
 
 /* Slider */
@@ -270,6 +372,14 @@ input[type="password"] {
 
 .login-container button:hover {
   background-color: #f7ef56;
+}
+.login-log {
+  display: flex;
+  justify-content: left; /* Төв рүү тэгшлэх */
+  margin-left: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem; /* Доошлуулах */
+  transform: translateX(20px); /* Баруун тийш 20px шилжүүлэх */
 }
 
 .login-logo {
