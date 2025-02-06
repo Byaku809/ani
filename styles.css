@@ -1,9 +1,27 @@
+:root {
+  --primary-color: #141f2a;
+  --secondary-color: #411e5c; /* Нэмэлт өнгө: ягаан */
+  --thirddary-color: #a6539a;
+  --background: linear-gradient(to bottom, #411e5c, #141f2a, #141f2a);
+  --background-visible: rgba(255, 255, 255, 0.1);
+  --gray: #27272a;
+  --pink: #3a013c;
+  --text-color: #ffffff;
+  --shadows: 2px 0 5px rgba(0, 0, 0, 0.5);
+  --text-size-nav: 10rem;
+  --text-size: 20rem;
+  --front-slide-urgun: 80rem;
+  --front-slide-undur: 40rem;
+  --trending-slide-urgun: 10rem;
+  --trending-slide-undur: 18rem;
+  --general-font: ;
+}
 /* Base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #411e5c, #141f2a, #141f2a);
+  background: var(--background);
   min-height: 100vh;
 }
 
@@ -20,7 +38,7 @@ header {
   font-size: 1.5rem;
   cursor: pointer;
   padding: 10px;
-  color: white;
+  color: var(--thirddary-color);
   width: 40px;
   text-align: center;
   border-radius: 5px;
@@ -41,17 +59,17 @@ header {
   left: -260px;
   width: 280px;
   height: 100%;
-  color: white;
+  color: var(--background);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadows);
   transition: left 0.3s ease;
   z-index: 999;
 }
 
 .menubar.active {
   left: 0;
-  background-color: #141f2a;
-  color: #fcfcfc;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .menubar p {
@@ -64,7 +82,7 @@ header {
 }
 
 .menubar p:hover {
-  color: #a6539a;
+  color: var(--thirddary-color);
 }
 
 .menubar p i {
@@ -86,7 +104,7 @@ header {
   border: none;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: var(--text-color);
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
@@ -101,7 +119,7 @@ header {
   right: 5px;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   padding: 10px;
 }
@@ -109,7 +127,7 @@ header {
 /* Login Button */
 .loginbtn {
   background-color: #3a013c;
-  color: white;
+  color: var(--text-color);
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
@@ -128,14 +146,14 @@ header {
   font-size: 1.5rem;
   background: transparent;
   border: none;
-  color: white;
+  color: var(--text-color);
   z-index: 1001; /* Менюгээс дээгүүр харагдах болгох */
 }
 
 .back-arrow {
   background: none;
   border: none;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   font-size: 24px;
   padding: 8px;
@@ -152,9 +170,9 @@ header {
   right: 0;
   width: 280px;
   height: 100%;
-  color: white;
+  color: var(--text-color);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadows);
   transition: left 0.3s ease;
   z-index: 999;
   background-color: #141f2a;
@@ -194,7 +212,7 @@ header {
 }
 
 .stat-card {
-  background-color: #27272a;
+  background-color: var(--gray);
   padding: 16px;
   border-radius: 8px;
   text-align: center;
@@ -223,7 +241,7 @@ header {
 }
 
 .menu-item:hover {
-  color: white;
+  color: var(--text-color);
 }
 
 /* Slider */
@@ -260,7 +278,7 @@ header {
   right: 1rem;
   max-width: 400px;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: var(--text-color);
   padding: 1rem;
   border-radius: 10px;
   font-size: 14px;
@@ -334,17 +352,16 @@ header {
 .login-container {
   padding: 40px;
   width: 30rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadows);
+  background: var(--background);
   border-radius: 4rem;
   margin-left: 5rem; /* Зүүн талаас 5rem зайтай болгох */
   opacity: 1;
   backdrop-filter: blur(2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .login-logo {
-  color: #141f2a;
+  color: var(--primary-color);
 }
 
 input[type="text"],
@@ -360,7 +377,7 @@ input[type="password"] {
 
 .login-container button {
   background: #d18800;
-  color: white;
+  color: var(--text-color);
   border: none;
   padding: 15px 40px;
   border-radius: 25px;
@@ -399,7 +416,7 @@ input[type="password"] {
 }
 .qr-container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--background-visible);
   padding: 20px;
   border-radius: 3rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -431,7 +448,7 @@ input[type="password"] {
 .qr-reader {
   text-align: center; /* Текстийг төвд байрлуулах */
   font-size: 1rem; /* Үсгийн хэмжээг тохируулах */
-  color: #ffffff; /* Өнгийг цагаан болгох */
+  color: var(--text-color); /* Өнгийг цагаан болгох */
   font-weight: 500; /* Жаахан тодруулах */
   margin-top: 0.5rem; /* Дээрээс зай авах */
   padding-left: 2rem; /* Дотор зай нэмэх */
