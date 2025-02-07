@@ -83,35 +83,66 @@
 
     </header>
 
-    <div class="slider-container">
-      <div class="slide-track">
-        <div class="slide">
-          <img src="/image/p3.jpg" alt="Slide 1" />
-          <p class="slide-description">
-            Мангасууд болон муу ёрын хүчнүүд байнга заналхийлдэг ертөнцөд Сун
-            Жинвугийн адал явдлуудыг дагадаг...
-          </p>
-        </div>
-        <div class="slide">
-          <img src="/image/p1.jpg" alt="Slide 2" />
-          <p class="slide-description">
-            Мангасууд болон муу ёрын хүчнүүд байнга заналхийлдэг ертөнцөд Сун
-            Жинвугийн адал явдлуудыг дагадаг...
-          </p>
-        </div>
-        <div class="slide">
-          <img src="/image/p2.jpg" alt="Slide 3" />
-          <p class="slide-description">
-            Мангасууд болон муу ёрын хүчнүүд байнга заналхийлдэг ертөнцөд Сун
-            Жинвугийн адал явдлуудыг дагадаг...
-          </p>
-        </div>
-      </div>
-      <div class="slider-controls">
-        <button class="prev">❮</button>
-        <button class="next">❯</button>
-      </div>
+    <div class="banner">
+      <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
+          <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
+    <div class="delgerengui">
+      <a href="modal.html">
+          <button id="playButton">Дэлгэрэнгүй</button>
+      </a>
     </div>
+  </div>  
+  
+<!-- Continue Watching -->
+<div class="continue-section">
+  <h2>Үргэлжлүүлэх</h2>
+  <button id="scrollLeft">←</button>
+  <button id="scrollRight">→</button>
+  <div class="episode-list" id="episodeList">
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>14-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>13-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>12-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>11-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>10-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>9-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>8-р анги</span>
+      </div>
+  </div>
+</div>
+
+<script>
+  const episodeList = document.getElementById("episodeList");
+  const scrollAmount = 200; // Adjust scrolling speed
+
+  document.getElementById("scrollLeft").addEventListener("click", () => {
+      episodeList.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  document.getElementById("scrollRight").addEventListener("click", () => {
+      episodeList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+</script>
+
     <script src="script.js"></script>
   </body>
 </html>

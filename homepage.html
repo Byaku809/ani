@@ -6,140 +6,9 @@
     <title>Анимэ сайт</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            display: flex;
-            background: linear-gradient(to bottom, #411e5c, #141f2a, #141f2a);
-            color: white;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .sidebar {
-            width: 80px;
-            background: linear-gradient(180deg, #3c1e68, #1c0f3a);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
-            gap: 25px;
-        }
-        .sidebar i {
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-        }
-        .main {
-            flex: 1;
-            padding: 20px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(180deg, #3c1e68, #1c0f3a);
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px;
-            border-radius: 20px;
-            width: 300px;
-        }
-        .search-box input {
-            background: none;
-            border: none;
-            color: white;
-            outline: none;
-            width: 100%;
-            padding-left: 10px;
-        }
-        .search-box i {
-            color: white;
-        }
-        .profile {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .profile i {
-            font-size: 24px;
-        }
-        .banner {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-        }
-        .banner img {
-            width: 70%;
-            border-radius: 15px;
-        }
-        .small-banner {
-            width: 30%;
-            background: #1c1c1c;
-            border-radius: 15px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            position: relative;
-        }
-        .small-banner img {
-            width: 100%;
-            border-radius: 15px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        .small-banner p {
-            font-size: 12px;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 5px;
-            border-radius: 5px;
-        }
-        .continue-section {
-            margin-top: 20px;
-        }
-        .continue-section h2 {
-            margin-bottom: 10px;
-        }
-        .episode-list {
-            display: flex;
-            gap: 10px;
-        }
-        .episode {
-            width: 120px;
-            background: linear-gradient(to bottom, #411e5c, #141f2a, #141f2a);
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            font-size: 14px;
-        }
-        .episode img {
-            width: 100%;
-            border-bottom: 2px solid red;
-        }
-        .episode span {
-            display: block;
-            padding: 5px;
-            background: red;
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
     <!-- Sidebar -->
     <div class="sidebar">
         <i class="fas fa-bars"></i>
@@ -148,10 +17,8 @@
         <i class="fas fa-heart"></i>
         <i class="fas fa-sync-alt"></i>
     </div>
-
     <!-- Main Content -->
     <div class="main">
-
         <!-- Header -->
         <div class="header">
             <div class="search-box">
@@ -165,48 +32,7 @@
         </div>
 
         <!-- Banner Section -->
-        <div class="banner">
-            <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
-            <div class="small-banner">
-                <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
-                <p>2024он 13+ <br> Дэлхий дээр...</p>
-            </div>
-        </div>
-
-        <!-- Continue Watching -->
-        <div class="continue-section">
-            <h2>Үргэлжлүүлэх</h2>
-            <div class="episode-list">
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>14-р анги</span>
-                </div>
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>13-р анги</span>
-                </div>
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>12-р анги</span>
-                </div>
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>11-р анги</span>
-                </div>
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>10-р анги</span>
-                </div>
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>9-р анги</span>
-                </div>
-                <div class="episode">
-                    <img src="/image/dragon ball.jpg" alt="Dragon ball">
-                    <span>8-р анги</span>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </body>
 </html>
