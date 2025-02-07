@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            /*background: #141f2a;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #411e5c, #141f2a, #141f2a);
+        }
+        .card {
+            width: 380px;
+            background: #1c1c1c;
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .rating {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #ffcc00;
+        }
+        .description {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
+        <div class="card-content">
+            <div class="title">Solo Leveling</div>
+            <div class="rating">⭐ 10/10</div>
+            <p class="description">
+                Нэгэн жирийн анчин аймшигт аюултай агуйн дотор амьд үлдэхийн төлөө тэмцэнэ. 
+                Түүний амьдрал өөрчлөгдөж, хамгийн хүчирхэг анчин болох аяллаа эхлүүлнэ!
+            </p>
+            <div class="footer">© 2025 Анимэ сайт</div>
+        </div>
+    </div>
+</body>
+</html>
