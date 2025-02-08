@@ -3,170 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>Responsive Navbar</title>
+    <title>Responsive Slider & Navigation</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <img
-          src="image/462642105_1102616094795456_7546687817633407335_n.jpg"
-          alt="logo"
-        />
-        <h1>aniWatch</h1>
-      </div>
-      <div class="search-section">
-        <form class="search-box">
-          <input type="text" placeholder="Search..." aria-label="Search" />
-          <button type="submit" title="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <div class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+    <header>
+      <div class="hamburger">☰</div>
+      <div class="menubar">
+        <button class="back-button">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="login-log">
+          <img
+            src="image/462642105_1102616094795456_7546687817633407335_n.jpg"
+            alt=""
+          />
         </div>
 
-        <ul>
-          <li>
-            <i class="fa-solid fa-house"></i>
-            <a href="index.html"><span class="link_text">Home</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-arrow-trend-up"></i>
-            <a href="#"><span class="link_text">Trending</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-ghost"></i>
-            <a href="genre.html"><span class="link_text">Genres</span></a>
-          </li>
-          <li>
-            <i class="fa-solid fa-address-book"></i>
-            <a href="contact.html"><span class="link_text">Contact</span></a>
-          </li>
-        </ul>
+        <p>
+          <a href="index.html"></a><i class="fas fa-home"></i> <span>Home</span>
+        </p>
+        <p><i class="fas fa-tv"></i> <span>Anime</span></p>
+        <p><i class="fas fa-plus"></i> <span>New Anime</span></p>
+        <p><i class="fas fa-heart"></i> <span>Liked</span></p>
       </div>
-    </nav>
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="login-catainer">
+          <button class="loginbtn" id="showButton"><i class="fas fa-user"></i></button>
+      </div>
+      <body>
+    <div class="container">
+        <div class="profile-content" id="profileContent">
+            <div class="header">
+                <button class="back-arrow" id="backArrow">←</button>
+                <span>Хэрэглэгчийн мэдээлэл</span>
+            </div>
 
-    <div class="menubar">
-      <ul>
-        <li>
-          <i class="fa-solid fa-house"></i>
-          <a href="index.html"><span class="link_text">Home</span></a>
-        </li>
-        <li>
-          <i class="fa-solid fa-arrow-trend-up"></i>
-          <a href="#"><span class="link_text">Trending</span></a>
-        </li>
-        <li>
-          <i class="fa-solid fa-ghost"></i>
-          <a href="genre.html"><span class="link_text">Genres</span></a>
-        </li>
-        <li>
-          <i class="fa-solid fa-address-book"></i>
-          <a href="contact.html"><span class="link_text">Contact</span></a>
-        </li>
-      </ul>
+            <div class="profile-section">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <div>Нэр: Хонгорзул</div>
+                    <div>Таны ID: 262022</div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div>24 өдөр</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div>6000</div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="menu-title">Хэрэглэгчийн цэс</h2>
+                <div class="menu-item">Миний профайл</div>
+                <div class="menu-item">Купон</div>
+                <div class="menu-item">Нөат баримт</div>
+                <div class="menu-item">Пин солих</div>
+                <div class="menu-item">Бүртгэлтэй төхөөрөмж</div>
+                <div class="menu-item">Үзсэн түүх</div>
+                <div class="menu-item">Таалагдсан аниме</div>
+            </div>
+        </div>
     </div>
+
+    </header>
+<body>
+    <!-- Navigation -->
+    
+    <!-- Video Player Section -->
     <div class="player-container">
-      <video id="videoPlayer" controls>
-        <source
-          src="video/[Kametsu] Akame ga Kill! S1 - 01 (1080p).mkv.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
-      <div class="episode-container">
-        <div class="episode-box">1</div>
-        <div class="episode-box">2</div>
-        <div class="episode-box">3</div>
-        <div class="episode-box">4</div>
-        <div class="episode-box">5</div>
-        <div class="episode-box">6</div>
-        <div class="episode-box">7</div>
-        <div class="episode-box">8</div>
-        <div class="episode-box">9</div>
-        <div class="episode-box">10</div>
-        <div class="episode-box">11</div>
-        <div class="episode-box">12</div>
-        <div class="episode-box">13</div>
-        <div class="episode-box">14</div>
-        <div class="episode-box">15</div>
-        <div class="episode-box">16</div>
-        <div class="episode-box">17</div>
-        <div class="episode-box">18</div>
-        <div class="episode-box">19</div>
-        <div class="episode-box">20</div>
-        <div class="episode-box">21</div>
-        <div class="episode-box">22</div>
-        <div class="episode-box">23</div>
-        <div class="episode-box">24</div>
-      </div>
-
-      <div class="info-section">
-        <div class="thumbnail">
-          <img src="image/Arcane.jpg" alt="Thumbnail" />
-          <div>
-            <h3>Arcane</h3>
-            <p>11+ | 1080p | 24 Episodes | 23M Views</p>
-          </div>
+        <div class="video-wrapper">
+            <video id="videoPlayer" controls poster="/api/placeholder/1280/720">
+                <source src="video/[Kametsu] Akame ga Kill! S1 - 01 (1080p).mkv.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </div>
-        <div class="comment">
-          <p class="author">Дулмаа</p>
-          <p class="date">12:30 PM, Apr 21, 2021</p>
-          <p>
-            Дараагийн ангийн спойлер өгнө шүү. Манга дээрээ үнэхээр гоё юм
-            болсон.kk
-          </p>
+
+        <div class="episodes-container">
+            <div class="episode-box">1</div>
+            <div class="episode-box">2</div>
+            <div class="episode-box">3</div>
+            <div class="episode-box">4</div>
+            <div class="episode-box">5</div>
+            <div class="episode-box">6</div>
+            <div class="episode-box">7</div>
+            <div class="episode-box">8</div>
+            <div class="episode-box">9</div>
+            <div class="episode-box">10</div>
+            <div class="episode-box">11</div>
+            <div class="episode-box">12</div>
+            <div class="episode-box">13</div>
+            <div class="episode-box">14</div>
+            <div class="episode-box">15</div>
+            <div class="episode-box">16</div>
+            <div class="episode-box">17</div>
+            <div class="episode-box">18</div>
+            <div class="episode-box">19</div>
+            <div class="episode-box">20</div>
+            <div class="episode-box">21</div>
+            <div class="episode-box">22</div>
+            <div class="episode-box">23</div>
+            <div class="episode-box">24</div>
         </div>
-      </div>
     </div>
 
     <script>
-      class VideoPlayer {
-        constructor() {
-          this.progress = document.querySelector(".progress");
-          this.playPauseBtn = document.querySelector(".play-pause");
-          this.fullscreenBtn = document.querySelector(".fullscreen");
-          this.timeDisplay = document.querySelector(".time");
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const menubar = document.querySelector('.menubar');
 
-          this.setupEventListeners();
-        }
+        hamburger.addEventListener('click', () => {
+            menubar.style.display = menubar.style.display === 'block' ? 'none' : 'block';
+        });
 
-        setupEventListeners() {
-          this.playPauseBtn.addEventListener("click", () =>
-            this.togglePlayPause()
-          );
-          this.fullscreenBtn.addEventListener("click", () =>
-            this.toggleFullscreen()
-          );
-        }
+        // Episode selection functionality
+        const episodeBoxes = document.querySelectorAll('.episode-box');
+        const videoPlayer = document.getElementById('videoPlayer');
 
-        togglePlayPause() {
-          const isPlaying = this.playPauseBtn.textContent === "⏸";
-          this.playPauseBtn.textContent = isPlaying ? "▶" : "⏸";
-        }
-
-        toggleFullscreen() {
-          const player = document.querySelector(".video-player");
-          if (!document.fullscreenElement) {
-            player.requestFullscreen();
-          } else {
-            document.exitFullscreen();
-          }
-        }
-      }
-
-      export { VideoPlayer };
+        episodeBoxes.forEach((box, index) => {
+            box.addEventListener('click', () => {
+                // Update video source based on episode number
+                // This is a placeholder - you'll need to update with actual video sources
+                videoPlayer.src = `video/[Kametsu] Akame ga Kill! S1 - ${(index + 1).toString().padStart(2, '0')} (1080p).mkv.mp4`;
+                videoPlayer.play();
+            });
+        });
     </script>
-  </body>
+</body>
 </html>

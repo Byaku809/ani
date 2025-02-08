@@ -89,6 +89,9 @@ header {
   margin-right: 15px;
   width: 20px;
 }
+.menubar.hidden {
+  width: 50px; /* Зөвхөн икон харагдана */
+}
 
 /* Search Container */
 .search-container {
@@ -102,7 +105,7 @@ header {
   width: 300px;
   padding: 10px 40px 10px 15px;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--text-color);
   font-size: 16px;
@@ -258,7 +261,9 @@ header {
 .slide-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  height: 100%;
+  height: 20px;
+  width: 10rem;
+  text-align: center;
 }
 
 .slide {
@@ -311,37 +316,82 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .slider-container {
-    width: 90%;
-    height: 25rem;
-  }
+
+.hero-image {
+  position: relative;
+  text-align: center;
+  width: 400px; /* Зургийн өргөн */
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin: 0 auto; /* Голлуулна */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Доторхи текстийг голлуулна */
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .slider-container {
-    height: 20rem;
-  }
-
-  .search-bar {
-    width: 200px;
-  }
+.hero-image img {
+  width: 100%; /* 100% болгож зөв харуулах */
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 480px) {
-  .slider-container {
-    height: 15rem;
-  }
-
-  .search-bar {
-    width: 150px;
-  }
-
-  .slide-description {
-    font-size: 12px;
-    max-width: 280px;
-  }
+.hero-image p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Текстийг төв рүү байрлуулна */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Хар саарал фон */
+  color: white;
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+  text-align: center; /* Текстийг голлуулна */
 }
+
+.hero-image:hover {
+  transform: scale(1.05); /* Татагдах эффект */
+}
+.season-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.season-btn {
+  padding: 10px 20px;
+  background-color: #4a4e69;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.season-btn.active {
+  background-color: #ff6b6b;
+}
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.season-grid img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.season-grid img:hover {
+  transform: scale(1.05);
+}
+.details {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 .login-wrapper {
   display: flex; /* Хажуугаар нь зэрэгцүүлнэ */
   justify-content: center;
@@ -453,3 +503,324 @@ input[type="password"] {
   margin-top: 0.5rem; /* Дээрээс зай авах */
   padding-left: 2rem; /* Дотор зай нэмэх */
 }
+
+.contact-container {
+  background-color: var(--primary-color); /* Түргэн солигдох өнгө */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Сүүдэр */
+  width: 100%;
+  max-width: 600px; /* Макс өргөн */
+  left: 50%;
+  transform: translateX(-50%); /* Текстийг төв рүү байрлуулна */
+  position: relative; /* Хөдөлгөөнгүй байрлал */
+  margin-top: 20px; /* Дээд талд зай */
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  color: var(--text-color);
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: var(--text-color);
+  font-size: 1.1em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 1.5em;
+  }
+
+  .contact-header p {
+    font-size: 1em;
+  }
+}
+.Image-contact {
+  max-width: 100%; /* Өргөнөө эзлэх максимум хэмжээг хязгаарлана */
+  text-align: center; /* Зурагт төв байрлал */
+}
+
+.Image-contact img {
+  max-width: 100%; /* Зургийн өргөн нь контейнерын хэмжээтэй нийцнэ */
+  height: auto; /* Өндөрийг тохируулж автоматаар харуулах */
+  border-radius: 8px; /* Дугуйлаг өнцөг */
+}
+
+
+        /* Player Container */
+        .player-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+            margin-bottom: 2rem;
+        }
+
+        #videoPlayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1280/720');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Episode Grid */
+        .episodes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            background: #222;
+            border-radius: 8px;
+        }
+
+        .episode-box {
+            background: #333;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .episodes-box:hover {
+            background: #444;
+        }
+
+       .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 4rem 0 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* Contact Form Styles */
+.footer-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-input {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+textarea.form-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Social Media Styles */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link.facebook:hover {
+    background-color: #1877f2;
+}
+
+.social-link.youtube:hover {
+    background-color: #ff0000;
+}
+
+.social-link.twitter:hover {
+    background-color: #1da1f2;
+}
+
+/* Quick Links Styles */
+.quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 0.8rem;
+}
+
+.quick-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quick-links a:hover {
+    color: #007bff;
+}
+
+/* Copyright Section */
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
