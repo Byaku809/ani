@@ -33,7 +33,6 @@ header {
   position: relative;
 }
 
-/* Hamburger and Menu */
 .hamburger {
   font-size: 1.5rem;
   cursor: pointer;
@@ -144,13 +143,16 @@ header {
 .back-button {
   position: absolute;
   top: 10px;
-  margin-right: 1rem; /* Баруун талд байрлуулах */
+  margin-right: 1rem;
   cursor: pointer;
   font-size: 1.5rem;
   background: transparent;
   border: none;
   color: var(--text-color);
   z-index: 1001; /* Менюгээс дээгүүр харагдах болгох */
+
+  color: white;
+  z-index: 1001;
 }
 
 .back-arrow {
@@ -393,10 +395,10 @@ header {
 }
 
 .login-wrapper {
-  display: flex; /* Хажуугаар нь зэрэгцүүлнэ */
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Хоёр хэсгийн хооронд зай гаргах */
+  gap: 2rem;
 }
 
 .login-container {
@@ -405,7 +407,7 @@ header {
   box-shadow: var(--shadows);
   background: var(--background);
   border-radius: 4rem;
-  margin-left: 5rem; /* Зүүн талаас 5rem зайтай болгох */
+  margin-left: 5rem;
   opacity: 1;
   backdrop-filter: blur(2px);
 }
@@ -443,26 +445,26 @@ input[type="password"] {
 }
 .login-log {
   display: flex;
-  justify-content: left; /* Төв рүү тэгшлэх */
+  justify-content: left;
   margin-left: 4rem;
   margin-top: 2rem;
-  margin-bottom: 3rem; /* Доошлуулах */
-  transform: translateX(20px); /* Баруун тийш 20px шилжүүлэх */
+  margin-bottom: 3rem;
+  transform: translateX(20px);
 }
 
 .login-logo {
   display: flex;
-  justify-content: left; /* Төв рүү тэгшлэх */
+  justify-content: left;
   margin-left: 16rem;
   margin-top: 5rem;
-  margin-bottom: 1rem; /* Доошлуулах */
-  transform: translateX(20px); /* Баруун тийш 20px шилжүүлэх */
+  margin-bottom: 1rem;
+  transform: translateX(20px);
 }
 
 .login-logo img {
-  width: 100px; /* Зургийн хэмжээг тохируулах */
+  width: 100px;
   height: auto;
-  border-radius: 1rem; /* Дугуй болгох (хэрэв хэрэгтэй бол) */
+  border-radius: 1rem;
 }
 .qr-container {
   text-align: center;
@@ -473,7 +475,7 @@ input[type="password"] {
 }
 
 .qr-container img {
-  width: 20rem; /* QR зургийн хэмжээг тохируулах */
+  width: 20rem;
   height: 20rem;
 }
 
@@ -496,106 +498,106 @@ input[type="password"] {
   color: #007bff;
 }
 .qr-reader {
-  text-align: center; /* Текстийг төвд байрлуулах */
-  font-size: 1rem; /* Үсгийн хэмжээг тохируулах */
-  color: var(--text-color); /* Өнгийг цагаан болгох */
-  font-weight: 500; /* Жаахан тодруулах */
-  margin-top: 0.5rem; /* Дээрээс зай авах */
-  padding-left: 2rem; /* Дотор зай нэмэх */
-}
-
-.contact-container {
-  background-color: var(--primary-color); /* Түргэн солигдох өнгө */
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Сүүдэр */
-  width: 100%;
-  max-width: 600px; /* Макс өргөн */
-  left: 50%;
-  transform: translateX(-50%); /* Текстийг төв рүү байрлуулна */
-  position: relative; /* Хөдөлгөөнгүй байрлал */
-  margin-top: 20px; /* Дээд талд зай */
-}
-
-.contact-header {
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.contact-header h1 {
-  color: var(--text-color);
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.contact-header p {
-  color: var(--text-color);
-  font-size: 1.1em;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.form-group label {
+  font-size: 1rem;
   color: #ffffff;
-  font-weight: bold;
-}
+  font-weight: 500;
+  margin-top: 0.5rem;
+  padding-left: 2rem;
 
-.form-group input,
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
-  transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-@media (max-width: 480px) {
   .contact-container {
-    padding: 20px;
+    background-color: var(--primary-color); /* Түргэн солигдох өнгө */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Сүүдэр */
+    width: 100%;
+    max-width: 600px; /* Макс өргөн */
+    left: 50%;
+    transform: translateX(-50%); /* Текстийг төв рүү байрлуулна */
+    position: relative; /* Хөдөлгөөнгүй байрлал */
+    margin-top: 20px; /* Дээд талд зай */
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   .contact-header h1 {
-    font-size: 1.5em;
+    color: var(--text-color);
+    font-size: 2em;
+    margin-bottom: 10px;
   }
 
   .contact-header p {
+    color: var(--text-color);
+    font-size: 1.1em;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .form-group label {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 1em;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 480px) {
+    .contact-container {
+      padding: 20px;
+    }
+
+    .contact-header h1 {
+      font-size: 1.5em;
+    }
+
+    .contact-header p {
+      font-size: 1em;
+    }
   }
 }
 .Image-contact {
@@ -609,204 +611,201 @@ button:hover {
   border-radius: 8px; /* Дугуйлаг өнцөг */
 }
 
+/* Player Container */
+.player-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-        /* Player Container */
-        .player-container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000;
+  margin-bottom: 2rem;
+}
 
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            background: #000;
-            margin-bottom: 2rem;
-        }
+#videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/api/placeholder/1280/720");
+  background-size: cover;
+  background-position: center;
+}
 
-        #videoPlayer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/api/placeholder/1280/720');
-            background-size: cover;
-            background-position: center;
-        }
+/* Episode Grid */
+.episodes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background: #222;
+  border-radius: 8px;
+}
 
-        /* Episode Grid */
-        .episodes-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-            gap: 1rem;
-            padding: 1rem;
-            background: #222;
-            border-radius: 8px;
-        }
+.episode-box {
+  background: #333;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-        .episode-box {
-            background: #333;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.episodes-box:hover {
+  background: #444;
+}
 
-        .episodes-box:hover {
-            background: #444;
-        }
-
-       .footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 4rem 0 2rem 0;
-    margin-top: 3rem;
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 4rem 0 2rem 0;
+  margin-top: 3rem;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
 }
 
 .footer-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .footer-section h3 {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 .footer-section h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    width: 50px;
-    height: 2px;
-    background-color: #007bff;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 50px;
+  height: 2px;
+  background-color: #007bff;
 }
 
 /* Contact Form Styles */
 .footer-contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .form-input {
-    padding: 0.8rem;
-    border-radius: 4px;
-    border: 1px solid #333;
-    background-color: #222;
-    color: #fff;
-    transition: border-color 0.3s;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+  transition: border-color 0.3s;
 }
 
 .form-input:focus {
-    outline: none;
-    border-color: #007bff;
+  outline: none;
+  border-color: #007bff;
 }
 
 textarea.form-input {
-    min-height: 100px;
-    resize: vertical;
+  min-height: 100px;
+  resize: vertical;
 }
 
 .submit-btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Social Media Styles */
 .social-links {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 .social-link:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .social-link.facebook:hover {
-    background-color: #1877f2;
+  background-color: #1877f2;
 }
 
 .social-link.youtube:hover {
-    background-color: #ff0000;
+  background-color: #ff0000;
 }
 
 .social-link.twitter:hover {
-    background-color: #1da1f2;
+  background-color: #1da1f2;
 }
 
 /* Quick Links Styles */
 .quick-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .quick-links li {
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .quick-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .quick-links a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 /* Copyright Section */
 .footer-bottom {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #333;
-    text-align: center;
-    color: #888;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  color: #888;
 }
-
-
 
 .card {
   width: 380px;
@@ -851,6 +850,13 @@ textarea.form-input {
   font-size: 13px;
   color: #888;
 }
+.footers {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
 .sidebar {
   width: 80px;
   background: linear-gradient(180deg, #3c1e68, #1c0f3a);
@@ -908,8 +914,8 @@ textarea.form-input {
   margin-top: 20px;
   display: flex;
   gap: 20px;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   margin-left: 50px;
   position: relative;
   overflow: hidden;
@@ -959,15 +965,15 @@ textarea.form-input {
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.5); /* Optional: Background for better readability */
+  background: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
   border-radius: 10px;
   text-align: center;
 }
 .delgerengui {
   position: absolute;
-  bottom: 10px;  /* Adjust this value to control how much above the image */
-  left: 95%;   /* Center it horizontally */
-  transform: translateX(-50%);  /* Correct the centering */
-  z-index: 10;  /* Ensure it appears above other content */
+  bottom: 10px;
+  left: 95%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
