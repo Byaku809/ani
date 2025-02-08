@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileContent = document.getElementById("profileContent");
   const showButton = document.getElementById("showButton");
 
-  // ✨ Анх харагдахгүй байлгах
+  // Анх харагдахгүй байлгах
   profileContent.classList.add("hidden");
 
   showButton.addEventListener("click", () => {
@@ -83,3 +83,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });*/
+
