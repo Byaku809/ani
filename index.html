@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Slider & Navigation</title>
     <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -34,6 +35,9 @@
         <p><i class="fas fa-plus"></i> <span>New Anime</span></p>
         <p><i class="fas fa-heart"></i> <span>Liked</span></p>
       </div>
+      <div class="Logo_index">
+        <img src="image/cl4ue.png" alt="alogo">
+      </div>
       <div class="search-container">
         <input type="text" placeholder="Search..." class="search-bar" />
         <button class="search-btn"><i class="fas fa-search"></i></button>
@@ -44,7 +48,7 @@
       <body>
     <div class="container">
         <div class="profile-content" id="profileContent">
-            <div class="header">
+            <div class="headera">
                 <button class="back-arrow" id="backArrow">←</button>
                 <span>Хэрэглэгчийн мэдээлэл</span>
             </div>
@@ -81,22 +85,54 @@
 
     </header>
 
-    <div class="banner">
-      <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
-          <img src="/image/solo-leveling.jpg" alt="Solo Leveling">
-    <div class="delgerengui">
-      <a href="modal.html">
-          <button id="playButton">Дэлгэрэнгүй</button>
-      </a>
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="image/solos.jpg" alt="Arcane">
+      <div class="titles">
+        <span>Solo leveling</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
     </div>
+    <div class="swiper-slide">
+      <img src="image/dandan.jpg" alt="Image">
+      <div class="titles">
+        <span>Dan da Dan</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="image/hxh.jpg" alt="Image">
+      <div class="titles">
+        <span>Hunter x Hunter</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="image/onepiece.jpg" alt="Image">
+      <div class="titles">
+        <span>Onepiece</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="/image/Jujutsu kaisen volume 14 cover.jpg" alt="Image">
+      <div class="titles">
+        <span>Jujutsu kaisen</span>
+ <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
 
-  </div>  
-  
-<!-- Continue Watching -->
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-scrollbar"></div>
+</div>
+
 <div class="continue-section">
   <h2>Үргэлжлүүлэх</h2>
-  <button id="scrollLeft">←</button>
-  <button id="scrollRight">→</button>
   <div class="episode-list" id="episodeList">
       <div class="episode">
           <img src="/image/dragon ball.jpg" alt="Dragon ball">
@@ -126,11 +162,15 @@
           <img src="/image/dragon ball.jpg" alt="Dragon ball">
           <span>8-р анги</span>
       </div>
+            <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>7-р анги</span>
+      </div>
+
   </div>
 </div>
     <footer class="footer">
     <div class="footer-container">
-        <!-- Contact Form Section -->
         <div class="footer-section">
             <h3>Contact Us</h3>
             <form class="footer-contact-form">
@@ -141,7 +181,6 @@
             </form>
         </div>
 
-        <!-- Quick Links Section -->
         <div class="footer-section">
             <h3>Quick Links</h3>
             <ul class="quick-links">
@@ -172,9 +211,8 @@
             </ul>
         </div>
 
-        <!-- Connect With Us Section -->
         <div class="footer-section">
-            <h3>Connect With Us</h3>
+            <h3>Бидэнтэй холбогдох</h3>
             <div class="social-links">
                 <a href="#" class="social-link facebook" title="Facebook">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -189,26 +227,12 @@
             <p>Follow us on social media for the latest updates and announcements!</p>
         </div>
     </div>
-
-    <!-- Copyright Section -->
     <div class="footer-bottom">
-        <p>&copy; 2025 aniWatch. All rights reserved.</p>
+        <p>&copy; 2025 PLAYME. All rights reserved.</p>
     </div>
 </footer>
 
-<script>
-  const episodeList = document.getElementById("episodeList");
-  const scrollAmount = 200; // Adjust scrolling speed
-
-  document.getElementById("scrollLeft").addEventListener("click", () => {
-      episodeList.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  });
-
-  document.getElementById("scrollRight").addEventListener("click", () => {
-      episodeList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <div class="footers">© 2025 Анимэ сайт</div>
   </body>
 </html>

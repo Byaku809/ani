@@ -42,6 +42,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   });
 });
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow", // coverflow effect
+  grabCursor: true, // Grab cursor (dragging cursor)
+  centeredSlides: true, // Centered slides
+  initialSlide: 2, // Initial slide (0-indexed)
+  speed: 600, // Speed of transition
+  preventClicks: true, // Prevent clicks on slides
+  slidesPerView: "auto", // Automatically adjust the number of slides visible
+  coverflowEffect: {
+    rotate: 0, // No rotation for slides
+    stretch: 80, // Stretch effect for slides
+    depth: 350, // Depth for 3D effect
+    modifier: 1, // Modifier for coverflow effect
+    slideShadows: true, // Enable shadows for slides
+  },
+  on: {
+    click: function (event) {
+      swiper.slideTo(this.clickedIndex); // Navigate to clicked slide
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination", // Pagination controls
+  },
+});
+
 // Simple Slider Functionality
 /*const slider = document.querySelector('[data-js="sslide"]');
   const allImages = slider ? slider.querySelectorAll("img") : [];
@@ -83,4 +108,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });*/
-

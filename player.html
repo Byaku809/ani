@@ -1,148 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Anime Template" />
+    <meta name="keywords" content="Anime, unica, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Slider & Navigation</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/plyr.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header>
-      <div class="hamburger">☰</div>
-      <div class="menubar">
-        <button class="back-button">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-        <div class="login-log">
-          <img
-            src="image/462642105_1102616094795456_7546687817633407335_n.jpg"
-            alt=""
-          />
-        </div>
-
-        <p>
-          <a href="index.html"></a><i class="fas fa-home"></i> <span>Home</span>
-        </p>
-        <p><i class="fas fa-tv"></i> <span>Anime</span></p>
-        <p><i class="fas fa-plus"></i> <span>New Anime</span></p>
-        <p><i class="fas fa-heart"></i> <span>Liked</span></p>
-      </div>
-      <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-bar" />
-        <button class="search-btn"><i class="fas fa-search"></i></button>
-      </div>
-      <div class="login-catainer">
-          <button class="loginbtn" id="showButton"><i class="fas fa-user"></i></button>
-      </div>
-      <body>
-    <div class="container">
-        <div class="profile-content" id="profileContent">
-            <div class="header">
-                <button class="back-arrow" id="backArrow">←</button>
-                <span>Хэрэглэгчийн мэдээлэл</span>
-            </div>
-
-            <div class="profile-section">
-                <div class="profile-image"></div>
-                <div class="profile-info">
-                    <div>Нэр: Хонгорзул</div>
-                    <div>Таны ID: 262022</div>
-                </div>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">⏰</div>
-                    <div>24 өдөр</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">💰</div>
-                    <div>6000</div>
-                </div>
-            </div>
-
-            <div class="menu-section">
-                <h2 class="menu-title">Хэрэглэгчийн цэс</h2>
-                <div class="menu-item">Миний профайл</div>
-                <div class="menu-item">Купон</div>
-                <div class="menu-item">Нөат баримт</div>
-                <div class="menu-item">Пин солих</div>
-                <div class="menu-item">Бүртгэлтэй төхөөрөмж</div>
-                <div class="menu-item">Үзсэн түүх</div>
-                <div class="menu-item">Таалагдсан аниме</div>
-            </div>
-        </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
     </div>
 
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html">
+                <img src="img/logo.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="header__nav">
+              <nav class="header__menu mobile-menu">
+                <ul>
+                  <li class="active"><a href="./index.html">Homepage</a></li>
+                  <li>
+                    <a href="./categories.html"
+                      >Categories <span class="arrow_carrot-down"></span
+                    ></a>
+                    <ul class="dropdown">
+                      <li><a href="./categories.html">Categories</a></li>
+                      <li><a href="./anime-details.html">Anime Details</a></li>
+                      <li>
+                        <a href="./anime-watching.html">Anime Watching</a>
+                      </li>
+                      <li><a href="./blog-details.html">Blog Details</a></li>
+                      <li><a href="./signup.html">Sign Up</a></li>
+                      <li><a href="./login.html">Login</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="./blog.html">Our Blog</a></li>
+                  <li><a href="#">Contacts</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="header__right">
+              <a href="#" class="search-switch"
+                ><span class="icon_search"></span
+              ></a>
+              <a href="./login.html"><span class="icon_profile"></span></a>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
     </header>
-<body>
-    <!-- Navigation -->
-    
-    <!-- Video Player Section -->
-    <div class="player-container">
-        <div class="video-wrapper">
-            <video id="videoPlayer" controls poster="/api/placeholder/1280/720">
-                <source src="video/[Kametsu] Akame ga Kill! S1 - 01 (1080p).mkv.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <!-- Header End -->
 
-        <div class="episodes-container">
-            <div class="episode-box">1</div>
-            <div class="episode-box">2</div>
-            <div class="episode-box">3</div>
-            <div class="episode-box">4</div>
-            <div class="episode-box">5</div>
-            <div class="episode-box">6</div>
-            <div class="episode-box">7</div>
-            <div class="episode-box">8</div>
-            <div class="episode-box">9</div>
-            <div class="episode-box">10</div>
-            <div class="episode-box">11</div>
-            <div class="episode-box">12</div>
-            <div class="episode-box">13</div>
-            <div class="episode-box">14</div>
-            <div class="episode-box">15</div>
-            <div class="episode-box">16</div>
-            <div class="episode-box">17</div>
-            <div class="episode-box">18</div>
-            <div class="episode-box">19</div>
-            <div class="episode-box">20</div>
-            <div class="episode-box">21</div>
-            <div class="episode-box">22</div>
-            <div class="episode-box">23</div>
-            <div class="episode-box">24</div>
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="breadcrumb__links">
+              <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+              <a href="./categories.html">Categories</a>
+              <a href="#">Romance</a>
+              <span>Fate Stay Night: Unlimited Blade</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <!-- Breadcrumb End -->
 
-    <script>
-        // Hamburger menu functionality
-        const hamburger = document.querySelector('.hamburger');
-        const menubar = document.querySelector('.menubar');
+    <!-- Anime Section Begin -->
+    <section class="anime-details spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="anime__video__player">
+              <video
+                id="player"
+                playsinline
+                controls
+                data-poster="./videos/anime-watch.jpg"
+              >
+                <source src="videos/1.mp4" type="video/mp4" />
+                <!-- Captions are optional -->
+                <track
+                  kind="captions"
+                  label="English captions"
+                  src="#"
+                  srclang="en"
+                  default
+                />
+              </video>
+            </div>
+            <div class="anime__details__episodes">
+              <div class="section-title">
+                <h5>List Name</h5>
+              </div>
+              <a href="#">Ep 01</a>
+              <a href="#">Ep 02</a>
+              <a href="#">Ep 03</a>
+              <a href="#">Ep 04</a>
+              <a href="#">Ep 05</a>
+              <a href="#">Ep 06</a>
+              <a href="#">Ep 07</a>
+              <a href="#">Ep 08</a>
+              <a href="#">Ep 09</a>
+              <a href="#">Ep 10</a>
+              <a href="#">Ep 11</a>
+              <a href="#">Ep 12</a>
+              <a href="#">Ep 13</a>
+              <a href="#">Ep 14</a>
+              <a href="#">Ep 15</a>
+              <a href="#">Ep 16</a>
+              <a href="#">Ep 17</a>
+              <a href="#">Ep 18</a>
+              <a href="#">Ep 19</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="anime__details__review">
+              <div class="section-title">
+                <h5>Reviews</h5>
+              </div>
+              <div class="anime__review__item">
+                <div class="anime__review__item__pic">
+                  <img src="img/anime/review-1.jpg" alt="" />
+                </div>
+                <div class="anime__review__item__text">
+                  <h6>Chris Curry - <span>1 Hour ago</span></h6>
+                  <p>
+                    whachikan Just noticed that someone categorized this as
+                    belonging to the genre "demons" LOL
+                  </p>
+                </div>
+              </div>
+              <div class="anime__review__item">
+                <div class="anime__review__item__pic">
+                  <img src="img/anime/review-2.jpg" alt="" />
+                </div>
+                <div class="anime__review__item__text">
+                  <h6>Lewis Mann - <span>5 Hour ago</span></h6>
+                  <p>Finally it came out ages ago</p>
+                </div>
+              </div>
+              <div class="anime__review__item">
+                <div class="anime__review__item__pic">
+                  <img src="img/anime/review-3.jpg" alt="" />
+                </div>
+                <div class="anime__review__item__text">
+                  <h6>Louis Tyler - <span>20 Hour ago</span></h6>
+                  <p>Where is the episode 15 ? Slow update! Tch</p>
+                </div>
+              </div>
+              <div class="anime__review__item">
+                <div class="anime__review__item__pic">
+                  <img src="img/anime/review-4.jpg" alt="" />
+                </div>
+                <div class="anime__review__item__text">
+                  <h6>Chris Curry - <span>1 Hour ago</span></h6>
+                  <p>
+                    whachikan Just noticed that someone categorized this as
+                    belonging to the genre "demons" LOL
+                  </p>
+                </div>
+              </div>
+              <div class="anime__review__item">
+                <div class="anime__review__item__pic">
+                  <img src="img/anime/review-5.jpg" alt="" />
+                </div>
+                <div class="anime__review__item__text">
+                  <h6>Lewis Mann - <span>5 Hour ago</span></h6>
+                  <p>Finally it came out ages ago</p>
+                </div>
+              </div>
+              <div class="anime__review__item">
+                <div class="anime__review__item__pic">
+                  <img src="img/anime/review-6.jpg" alt="" />
+                </div>
+                <div class="anime__review__item__text">
+                  <h6>Louis Tyler - <span>20 Hour ago</span></h6>
+                  <p>Where is the episode 15 ? Slow update! Tch</p>
+                </div>
+              </div>
+            </div>
+            <div class="anime__details__form">
+              <div class="section-title">
+                <h5>Your Comment</h5>
+              </div>
+              <form action="#">
+                <textarea placeholder="Your Comment"></textarea>
+                <button type="submit">
+                  <i class="fa fa-location-arrow"></i> Review
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Anime Section End -->
 
-        hamburger.addEventListener('click', () => {
-            menubar.style.display = menubar.style.display === 'block' ? 'none' : 'block';
-        });
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+      <div class="page-up">
+        <a href="#" id="scrollToTopButton"
+          ><span class="arrow_carrot-up"></span
+        ></a>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="footer__logo">
+              <a href="./index.html"><img src="img/logo.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer__nav">
+              <ul>
+                <li class="active"><a href="./index.html">Homepage</a></li>
+                <li><a href="./categories.html">Categories</a></li>
+                <li><a href="./blog.html">Our Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="fa fa-heart" aria-hidden="true"></i> by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
 
-        // Episode selection functionality
-        const episodeBoxes = document.querySelectorAll('.episode-box');
-        const videoPlayer = document.getElementById('videoPlayer');
+    <!-- Search model Begin -->
+    <div class="search-model">
+      <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch"><i class="icon_close"></i></div>
+        <form class="search-model-form">
+          <input type="text" id="search-input" placeholder="Search here....." />
+        </form>
+      </div>
+    </div>
+    <!-- Search model end -->
 
-        episodeBoxes.forEach((box, index) => {
-            box.addEventListener('click', () => {
-                // Update video source based on episode number
-                // This is a placeholder - you'll need to update with actual video sources
-                videoPlayer.src = `video/[Kametsu] Akame ga Kill! S1 - ${(index + 1).toString().padStart(2, '0')} (1080p).mkv.mp4`;
-                videoPlayer.play();
-            });
-        });
-    </script>
-</body>
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
