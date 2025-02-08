@@ -66,7 +66,20 @@ var swiper = new Swiper(".swiper", {
     el: ".swiper-pagination", // Pagination controls
   },
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const trendingLink = document.getElementById("trendingLink");
+  const trendingSection = document.getElementById("trendingSection");
 
+  if (trendingLink && trendingSection) {
+    trendingLink.addEventListener("click", () => {
+      // Шилжих хэсгийг үзүүлнэ
+      trendingSection.classList.add("show");
+
+      // Scroll хийж, хэсэг рүү шилжинэ
+      trendingSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
 // Simple Slider Functionality
 /*const slider = document.querySelector('[data-js="sslide"]');
   const allImages = slider ? slider.querySelectorAll("img") : [];
