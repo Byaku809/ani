@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141f2a;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-container {
+  background-color: #c3c3c3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-header h1 {
+  font-size: 24px;
+}
+
+.profile-header span {
+  color: #411e5c;
+  font-size: 14px;
+}
+
+.profile-body {
+  margin-top: 20px;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.logout-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+}
+
+footer .footer-text {
+  font-size: 14px;
+}

@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+function togglePopup() {
+  document.getElementById("popup").classList.toggle("active");
+}
 // Simple Slider Functionality
 /*const slider = document.querySelector('[data-js="sslide"]');
   const allImages = slider ? slider.querySelectorAll("img") : [];

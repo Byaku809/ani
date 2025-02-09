@@ -1,0 +1,111 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141F2A;
+  color: #333;
+  padding: 20px;
+}
+
+ Header styles /
+header {
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.coupon-container {
+  background-color: #C3C3C3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.coupon-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.coupon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.coupon-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coupon-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.coupon-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.apply-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #45a049;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+}
+
+footer .footer-text {
+  font-size: 14px;
+}

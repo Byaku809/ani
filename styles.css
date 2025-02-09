@@ -1184,5 +1184,21 @@ textarea.form-input {
   display: block;
   opacity: 1;
 }
-.fas fa-tv {
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  display: none; /* Эхэндээ нуух */
+}
+
+.popup.active {
+  display: block; /* Click хийхэд гарч ирнэ */
 }
