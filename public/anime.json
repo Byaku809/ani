@@ -1,0 +1,44 @@
+[
+  {
+    "title": "White Snake: Afloat",
+    "imageUrl": "/image/Arcane.jpg",
+    "type": "Movie",
+    "genre": "Fantasy",
+    "episodes": 1
+  },
+  {
+    "title": "The Long Ballad",
+    "imageUrl": "/image/hxh.jpg",
+    "type": "ONA",
+    "genre": "Adventure",
+    "episodes": "?"
+  },
+  {
+    "title": "Everything is Fine",
+    "imageUrl": "/image/Jujutsu kaisen volume 14 cover.jpg",
+    "type": "ONA",
+    "genre": "Thriller",
+    "episodes": "?"
+  },
+  {
+    "title": "Shinran: Jinsei no Uta",
+    "imageUrl": "/image/onepiece.jpg",
+    "type": "Movie",
+    "genre": "Historical",
+    "episodes": 1
+  },
+  {
+    "title": "Hypnosis Mic: Division Rap Battle",
+    "imageUrl": "/image/ce386t7qwya71.webp",
+    "type": "Movie",
+    "genre": "Music",
+    "episodes": 1
+  },
+  {
+    "title": "Binan Koukou",
+    "imageUrl": "/image/solo.jpg",
+    "type": "Movie",
+    "genre": "Comedy",
+    "episodes": 1
+  }
+]

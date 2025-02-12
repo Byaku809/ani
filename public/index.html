@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Slider & Navigation</title>
+    <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="hamburger">☰</div>
+      <div class="menubar">
+        <button class="back-button">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="login-log">
+          <img
+            src="image/462642105_1102616094795456_7546687817633407335_n.jpg"
+            alt=""
+          />
+        </div>
+        <p>
+          <a href="index.html"></a><i class="fas fa-home"></i> <span>Home</span>
+        </p>
+        <p><i class="fas fa-tv"></i> <span>Anime</span></p>
+        <p><i class="fas fa-plus"></i> <span>New Anime</span></p>
+        <p><i class="fas fa-heart"></i> <span>Liked</span></p>
+      </div>
+      <div class="Logo_index">
+        <img src="image/cl4ue.png" alt="alogo">
+      </div>
+      <div class="search-container">
+        <input type="text"  id="search" placeholder="Search..." class="search-bar" />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="login-catainer">
+          <button class="loginbtn" id="showButton"><i class="fas fa-user"></i></button>
+      </div>
+      <body>
+    <div class="container">
+        <div class="profile-content" id="profileContent">
+            <div class="headera">
+                <button class="back-arrow" id="backArrow">←</button>
+                <span>Хэрэглэгчийн мэдээлэл</span>
+            </div>
+            <div class="profile-section">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <div>Нэр: Хонгорзул</div>
+                    <div>Таны ID: 262022</div>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div>24 өдөр</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div>6000</div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="menu-title">Хэрэглэгчийн цэс</h2>
+                <a href="/profile.html" class="menu-item">Миний профайл</a><br>
+                <a href="/coupon.html" class="menu-item">Купон</a>
+                <div class="menu-item">Нөат баримт</div>
+                <div class="menu-item">Пин солих</div>
+                <div class="menu-item">Бүртгэлтэй төхөөрөмж</div>
+                <div class="menu-item">Үзсэн түүх</div>
+                <div class="menu-item">Таалагдсан аниме</div>
+                <div class="menu-item">
+                  <a href="login.html"><i class="fa-solid fa-share"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header>
+ 
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="image/0df6fa2f3d00cb2c2148cefb82975a49.gif" alt="Arcane">
+      <div class="titles">
+        <span>Solo leveling</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="image/hxh.gif" alt="Image">
+      <div class="titles">
+        <span>Dan da Dan</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="image/howl.gif" alt="Image">
+      <div class="titles">
+        <span>Hunter x Hunter</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="image/juj.gif" alt="Image">
+      <div class="titles">
+        <span>Onepiece</span>
+         <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="image/dan.gif" alt="Image">
+      <div class="titles">
+        <span>Jujutsu kaisen</span>
+ <a href="modal.html" class="details-btn">Дэлгэрэнгүй</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<div class="continue-section">
+  <h2>Үргэлжлүүлэх</h2>
+  <div class="episode-list" id="episodeList">
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>14-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>13-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>12-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>11-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>10-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>9-р анги</span>
+      </div>
+      <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>8-р анги</span>
+      </div>
+            <div class="episode">
+          <img src="/image/dragon ball.jpg" alt="Dragon ball">
+          <span>7-р анги</span>
+      </div>
+
+  </div>
+</div>
+<div class="continue-section">
+  <h2>Шинээр нэмэгдсэн</h2>
+  <div class="episode-list" id="episodeList">
+      <div class="episode">
+          <img src="/image/solo-leveling.jpg" alt="Dragon ball">
+          <span>Solo leveling</span>
+      </div>
+      <div class="episode">
+          <img src="/image/p3.jpg" alt="Dragon ball">
+          <span>Dan da dan</span>
+      </div>
+      <div class="episode">
+          <img src="/image/howl.jpg" alt="Dragon ball">
+          <span>Bleach</span>
+      </div>
+      <div class="episode">
+          <img src="/image/download.jpg" alt="Dragon ball">
+          <span>HxH</span>
+      </div>
+      <div class="episode">
+          <img src="/image/log3.jpg" alt="Dragon ball">
+          <span>Dragon ball</span>
+      </div>
+      <div class="episode">
+          <img src="/image/p1.jpg" alt="Dragon ball">
+          <span>Jujutsu kaisen</span>
+      </div>
+      <div class="episode">
+          <img src="/image/solo-leveling.jpg" alt="Dragon ball">
+          <span>Onepiece</span>
+      </div>
+            <div class="episode">
+          <img src="/image/p3.jpg" alt="Dragon ball">
+          <span>Howl in castle</span>
+      </div>
+
+  </div>
+</div>
+<div class="continue-section">
+  <h2>Trending</h2>
+  <div class="episode-list" id="episodeList">
+      <div class="episode">
+          <img src="/image/solo-leveling.jpg" alt="Dragon ball">
+          <span>Solo leveling</span>
+      </div>
+      <div class="episode">
+          <img src="/image/p3.jpg" alt="Dragon ball">
+          <span>Dan da dan</span>
+      </div>
+      <div class="episode">
+          <img src="/image/howl.jpg" alt="Dragon ball">
+          <span>Bleach</span>
+      </div>
+      <div class="episode">
+          <img src="/image/download.jpg" alt="Dragon ball">
+          <span>HxH</span>
+      </div>
+      <div class="episode">
+          <img src="/image/log3.jpg" alt="Dragon ball">
+          <span>Dragon ball</span>
+      </div>
+      <div class="episode">
+          <img src="/image/p1.jpg" alt="Dragon ball">
+          <span>Jujutsu kaisen</span>
+      </div>
+      <div class="episode">
+          <img src="/image/solo-leveling.jpg" alt="Dragon ball">
+          <span>Onepiece</span>
+      </div>
+            <div class="episode">
+          <img src="/image/p3.jpg" alt="Dragon ball">
+          <span>Howl in castle</span>
+      </div>
+  </div>
+</div>
+<h2 class="section-titale">Top Upcoming</h2>
+  <div class="anime-griad">
+
+  </div>
+  <div class="view-more">
+    <a href="#">View more →</a>
+  </div>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <form class="footer-contact-form">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+                <input type="email" class="form-input" placeholder="Your Email" required>
+                <textarea class="form-input" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <span>Trending</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-ghost"></i>
+                        <span>Genres</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-address-book"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>   
+        </div>
+
+        <div class="footer-section">
+            <h3>Бидэнтэй холбогдох</h3>
+            <div class="social-links">
+                <a href="#" class="social-link facebook" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link youtube" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link twitter" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+            <p>Follow us on social media for the latest updates and announcements!</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 PLAYME. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="animeclass.js"></script>
+  </body>
+</html>
