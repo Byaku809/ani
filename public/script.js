@@ -66,7 +66,6 @@ var swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
 });
-// main.js
 import { fetchAnimeData } from "./fetchanime.js";
 import { displayAnimeList } from "./display.js";
 import { searchAnime } from "./search.js";

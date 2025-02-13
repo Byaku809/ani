@@ -1,4 +1,4 @@
-// anime.js
+
 export class Anime {
   constructor(title, genre, episodes, imageUrl) {
     this.title = title;

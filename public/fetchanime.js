@@ -1,4 +1,4 @@
-// fetchAnime.js
+
 import { Anime } from "./anime.js";
 
 export let animeList = [];
